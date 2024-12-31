@@ -123,6 +123,10 @@ th.description-column, td.description-column {
 }
 th.dates-aired-column, td.dates-aired-column {
     width: 20%;
+    white-space: nowrap; /* Prevent breaking numbers */
+    overflow-wrap: break-word; /* Allow breaks at word boundaries */
+    word-break: keep-all; /* Do not break numbers or words arbitrarily */
+    line-height: 1.5; /* Adjust line spacing */
 }
 th.times-aired-column, td.times-aired-column {
     width: 3%;
@@ -142,6 +146,11 @@ th.times-aired-column, td.times-aired-column {
     }
     th.dates-aired-column, td.dates-aired-column {
         display: table-cell;
+	max-width: 180px; /* Limit width for better readability */
+        width: 60%; /* Maintain responsive width */
+        white-space: pre-wrap; /* Allow wrapping */
+        word-break: break-word; /* Allow breaks at word boundaries */
+        line-height: 1.5; /* Maintain line spacing */
         width: 40%;
     }
     th.times-aired-column, td.times-aired-column {
