@@ -129,11 +129,6 @@ th.dates-aired-column, td.dates-aired-column {
     line-height: 1.5; /* Adjust line spacing */
     word-break: keep-all; /* Prevent breaking mid-word */
 }
-
-	/* Ensure breaks occur only after commas */
-td.dates-aired-column::after {
-    content: '\200b'; /* Zero-width space after commas */
-}
 th.times-aired-column, td.times-aired-column {
     width: 3%;
 }
@@ -152,6 +147,10 @@ th.times-aired-column, td.times-aired-column {
     th.times-aired-column, td.times-aired-column {
         display: table-cell; /* Show columns */
         white-space: pre-wrap; /* Allow text to wrap */
+    }
+	/* Ensure breaks occur only after commas */
+td.dates-aired-column::after {
+    content: '\200b'; /* Zero-width space after commas */
     }
     /* Limit the width of the dates-aired column on mobile */
     th.dates-aired-column, td.dates-aired-column {
