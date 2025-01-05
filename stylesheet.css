@@ -122,6 +122,13 @@ th.times-aired-column, td.times-aired-column {
     width: 3%;
 }
 
+.page-link.active {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: 1px solid #007bff; /* Match border color */
+    border-radius: 4px; /* Rounded corners */
+    font-weight: bold; /* Make the font bold */
+}
 /* Responsive adjustments for mobile devices - vertical*/
 @media screen and (max-width: 768px) and (orientation: portrait) {
     /* Hide all columns by default */
