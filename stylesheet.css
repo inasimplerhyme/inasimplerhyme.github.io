@@ -166,7 +166,7 @@ th.times-aired-column, td.times-aired-column {
         display: none;
     }
 
-    /* Show only these 3 columns */
+
     th.movies-column, td.movies-column {
         display: table-cell;
         width: 15%; /* Adjust width for mobile readability */
@@ -178,15 +178,13 @@ th.times-aired-column, td.times-aired-column {
 
     th.ratings-column, td.ratings-column {
     display: table-cell;
-    width: 20%;
-    white-space: normal; /* Allow text wrapping */
-    word-break: break-word; /* Allow breaking at word boundaries */
-    overflow-wrap: break-word; /* Ensure compatibility with older browsers */
-    line-height: 1.5; /* Adjust spacing for readability */
+    width: 16%;
+    white-space: preserve nowrap;
+    word-break: keep-all;
     }
     th.runtime-column, td.runtime-column {
     display: table-cell;
-    width: 3%;
+    width: 1%;
     white-space: normal; /* Allow text wrapping */
     word-break: break-word; /* Allow breaking at word boundaries */
     overflow-wrap: break-word; /* Ensure compatibility with older browsers */
@@ -202,7 +200,7 @@ th.times-aired-column, td.times-aired-column {
     }
     th.description-column, td.description-column {
     display: table-cell;
-    width: 25%;
+    width: 28%;
     white-space: normal; /* Allow text wrapping */
     word-break: break-word; /* Allow breaking at word boundaries */
     overflow-wrap: break-word; /* Ensure compatibility with older browsers */
@@ -210,7 +208,7 @@ th.times-aired-column, td.times-aired-column {
     }
     th.dates-aired-column, td.dates-aired-column {
         display: table-cell;
-        width: 24%; /* Maintain responsive width */
+        width: 27%; /* Maintain responsive width */
     white-space: normal; /* Allow text wrapping */
     word-break: break-word; /* Allow breaking at word boundaries */
     overflow-wrap: break-word; /* Ensure compatibility with older browsers */
