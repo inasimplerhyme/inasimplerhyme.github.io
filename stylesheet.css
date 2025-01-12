@@ -178,7 +178,7 @@ th.times-aired-column, td.times-aired-column {
 
     th.ratings-column, td.ratings-column {
     display: table-cell;
-    width: 8%;
+    width: 12%;
     }
     th.runtime-column, td.runtime-column {
     display: table-cell;
@@ -198,7 +198,7 @@ th.times-aired-column, td.times-aired-column {
     }
     th.description-column, td.description-column {
     display: table-cell;
-    width: 31%;
+    width: 29%;
     white-space: normal; /* Allow text wrapping */
     word-break: break-word; /* Allow breaking at word boundaries */
     overflow-wrap: break-word; /* Ensure compatibility with older browsers */
@@ -206,7 +206,7 @@ th.times-aired-column, td.times-aired-column {
     }
     th.dates-aired-column, td.dates-aired-column {
         display: table-cell;
-        width: 30%; /* Maintain responsive width */
+        width: 28%; /* Maintain responsive width */
     white-space: normal; /* Allow text wrapping */
     word-break: break-word; /* Allow breaking at word boundaries */
     overflow-wrap: break-word; /* Ensure compatibility with older browsers */
