@@ -1,0 +1,230 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+	.search-section {
+            color: white;
+	    text-align: center;
+	    
+	}	
+	.search-by-date {
+	font-family: Arial Black, sans-serif;
+	background-color: white;
+	}
+	.words-of-caution-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+	.words-of-caution-section {
+            width: 20%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+	.words-of-caution-list {
+            list-style-type: none;
+            padding: 0 5px;
+            text-align: left;
+        }
+	.words-of-caution-list li {
+	    display: flex;
+            justify-content: left;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+	.words-of-caution-abbrev {
+            min-width: 75px;
+            text-align: right;
+            margin-right: 10px;
+        }
+	.words-of-caution-definition {
+            text-align: left;
+        }
+        @media (max-width: 768px) {
+            .words-of-caution-section {
+                width: 100%;
+                margin-bottom: 0px;
+            }
+	}
+.results-container {
+    width: 100%; /* Ensures the container adjusts to screen width */
+    overflow-x: auto; /* Enables horizontal scrolling if content is wider */
+    margin: 0 auto; /* Centers the container */
+}
+button#searchButton {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button#searchButton:hover {
+    background-color: #0056b3;
+}
+
+
+#dataTable {
+    max-width: 100%;
+    overflow-x: auto; /* Enables horizontal scroll */
+    border-collapse: collapse;
+    table-layout: auto; /* Lets the table adjust column widths dynamically */
+    display: none; /* Table is hidden by default */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    white-space: normal; /* Allows text wrapping within cells */
+}
+
+th {
+    cursor: pointer;
+    color: black;
+    background-color: #f2f2f2;
+}
+th.ascending::after {
+    content: " ▲"; /* Up arrow for ascending */
+}
+
+th.descending::after {
+    content: " ▼"; /* Down arrow for descending */
+}
+
+/* Default column widths for desktop */
+th.movies-column, td.movies-column {
+    width: 15%; /* You can use percentages */
+}
+th.ratings-column, td.ratings-column {
+    width: 8%;
+}
+th.runtime-column, td.runtime-column {
+    width: 3%;
+}
+th.words-of-caution-column, td.words-of-caution-column {
+    width: 10%;
+}
+th.description-column, td.description-column {
+    width: 31%;
+}
+th.dates-aired-column, td.dates-aired-column {
+    width: 30%;   
+}
+th.times-aired-column, td.times-aired-column {
+    width: 3%;
+}
+
+.page-link.active {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: 1px solid #007bff; /* Match border color */
+    border-radius: 4px; /* Rounded corners */
+    font-weight: bold; /* Make the font bold */
+}
+/* Responsive adjustments for mobile devices - vertical*/
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    /* Hide all columns by default */
+    th, td {
+        display: none;
+    }
+
+    /* Show only these 3 columns */
+    th.movies-column, td.movies-column {
+        display: table-cell;
+        width: 45%; /* Adjust width for mobile readability */
+	 white-space: normal; /* Allow text wrapping */
+    word-break: break-word; /* Allow breaking at word boundaries */
+    overflow-wrap: break-word; /* Ensure compatibility with older browsers */
+    line-height: 1.5; /* Adjust spacing for readability */
+    }
+    th.dates-aired-column, td.dates-aired-column {
+        display: table-cell;
+        width: 45%; /* Maintain responsive width */
+    white-space: normal; /* Allow text wrapping */
+    word-break: break-word; /* Allow breaking at word boundaries */
+    overflow-wrap: break-word; /* Ensure compatibility with older browsers */
+    line-height: 1.5; /* Adjust spacing for readability */
+      
+    }
+    th.times-aired-column, td.times-aired-column {
+        display: table-cell;
+        width: 10%;
+    }
+
+/* Responsive adjustments for mobile devices - horizontal*/
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    /* Hide all columns by default */
+    th, td {
+        display: none;
+    }
+
+    /* Show only these 3 columns */
+    th.movies-column, td.movies-column {
+        display: table-cell;
+        width: 15%; /* Adjust width for mobile readability */
+	 white-space: normal; /* Allow text wrapping */
+    word-break: break-word; /* Allow breaking at word boundaries */
+    overflow-wrap: break-word; /* Ensure compatibility with older browsers */
+    line-height: 1.5; /* Adjust spacing for readability */
+    }
+
+    th.ratings-column, td.ratings-column {
+    display: table-cell;
+    width: 20%;
+    white-space: normal; /* Allow text wrapping */
+    word-break: break-word; /* Allow breaking at word boundaries */
+    overflow-wrap: break-word; /* Ensure compatibility with older browsers */
+    line-height: 1.5; /* Adjust spacing for readability */
+    }
+    th.runtime-column, td.runtime-column {
+    display: table-cell;
+    width: 3%;
+    white-space: normal; /* Allow text wrapping */
+    word-break: break-word; /* Allow breaking at word boundaries */
+    overflow-wrap: break-word; /* Ensure compatibility with older browsers */
+    line-height: 1.5; /* Adjust spacing for readability */
+    }
+    th.words-of-caution-column, td.words-of-caution-column {
+    display: table-cell;
+    width: 10%;
+    white-space: normal; /* Allow text wrapping */
+    word-break: break-word; /* Allow breaking at word boundaries */
+    overflow-wrap: break-word; /* Ensure compatibility with older browsers */
+    line-height: 1.5; /* Adjust spacing for readability */
+    }
+    th.description-column, td.description-column {
+    display: table-cell;
+    width: 25%;
+    white-space: normal; /* Allow text wrapping */
+    word-break: break-word; /* Allow breaking at word boundaries */
+    overflow-wrap: break-word; /* Ensure compatibility with older browsers */
+    line-height: 1.5; /* Adjust spacing for readability */
+    }
+    th.dates-aired-column, td.dates-aired-column {
+        display: table-cell;
+        width: 24%; /* Maintain responsive width */
+    white-space: normal; /* Allow text wrapping */
+    word-break: break-word; /* Allow breaking at word boundaries */
+    overflow-wrap: break-word; /* Ensure compatibility with older browsers */
+    line-height: 1.5; /* Adjust spacing for readability */
+      
+    }
+    th.times-aired-column, td.times-aired-column {
+        display: table-cell;
+        width: 3%;
+    white-space: normal; /* Allow text wrapping */
+    word-break: break-word; /* Allow breaking at word boundaries */
+    overflow-wrap: break-word; /* Ensure compatibility with older browsers */
+    line-height: 1.5; /* Adjust spacing for readability */
+    }
+}
+
+	
