@@ -104,7 +104,7 @@ th.movies-column, td.movies-column {
     width: 15%; /* You can use percentages */
 }
 th.ratings-column, td.ratings-column {
-    width: 8%;
+    width: 12%;
 }
 th.runtime-column, td.runtime-column {
     width: 3%;
@@ -113,10 +113,10 @@ th.words-of-caution-column, td.words-of-caution-column {
     width: 10%;
 }
 th.description-column, td.description-column {
-    width: 31%;
+    width: 29%;
 }
 th.dates-aired-column, td.dates-aired-column {
-    width: 30%;   
+    width: 28%;   
 }
 th.times-aired-column, td.times-aired-column {
     width: 3%;
@@ -178,13 +178,11 @@ th.times-aired-column, td.times-aired-column {
 
     th.ratings-column, td.ratings-column {
     display: table-cell;
-    width: 16%;
-    white-space: preserve nowrap;
-    word-break: keep-all;
+    width: 8%;
     }
     th.runtime-column, td.runtime-column {
     display: table-cell;
-    width: 1%;
+    width: 3%;
     white-space: normal; /* Allow text wrapping */
     word-break: break-word; /* Allow breaking at word boundaries */
     overflow-wrap: break-word; /* Ensure compatibility with older browsers */
@@ -200,7 +198,7 @@ th.times-aired-column, td.times-aired-column {
     }
     th.description-column, td.description-column {
     display: table-cell;
-    width: 28%;
+    width: 31%;
     white-space: normal; /* Allow text wrapping */
     word-break: break-word; /* Allow breaking at word boundaries */
     overflow-wrap: break-word; /* Ensure compatibility with older browsers */
@@ -208,7 +206,7 @@ th.times-aired-column, td.times-aired-column {
     }
     th.dates-aired-column, td.dates-aired-column {
         display: table-cell;
-        width: 27%; /* Maintain responsive width */
+        width: 30%; /* Maintain responsive width */
     white-space: normal; /* Allow text wrapping */
     word-break: break-word; /* Allow breaking at word boundaries */
     overflow-wrap: break-word; /* Ensure compatibility with older browsers */
