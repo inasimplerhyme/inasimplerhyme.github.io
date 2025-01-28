@@ -21,8 +21,11 @@
 	<h1>1980s Searchable Program Guide Database</h1>
 	<p></p>
 	
+<!-- Collapsable Words of Caution -->
+
+<button type="button" class="collapsible"><h3> Words of Caution:</h3></button>
+<div class="content">
 		
-	<h2> Words of Caution:</h2>
 	<div class="words-of-caution-container">
 	<div class="words-of-caution-section">
 	<ul class="words-of-caution-list">
@@ -31,6 +34,7 @@
 		<li><span class="words-of-caution-abbrev"><b>AL</b></span><span class="words-of-caution-definition">Adult Language</span></li>
 	</ul>
 	</div>
+
 	<div class="words-of-caution-section">
 	<ul class="words-of-caution-list">
 		<li><span class="words-of-caution-abbrev"><b>AH</b></span><span class="words-of-caution-definition">Adult Humor</span></li>
@@ -60,6 +64,7 @@
 		<li><span class="words-of-caution-abbrev"><b>SC</b></span><span class="words-of-caution-definition">Strong Sexual Content</span></li>
 		<li><span class="words-of-caution-abbrev"><b>R</b></span><span class="words-of-caution-definition">Rape</span></li>
 	</ul>
+	</div> <!-- Collapsable -->
 	</div>
 
 
@@ -104,7 +109,6 @@
 	</thead>
 	<tbody>
 <!-- Search Data -->
-
 
 <tr>
      <td class="movies-column">...All the Marbles</td>
@@ -30826,6 +30830,9 @@
 
 
 
+
+
+
 <!-- End Search Data -->
 
 
@@ -30839,6 +30846,22 @@
 
 
 <script>
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     // Automatically focus on the search input field
     document.getElementById("searchInput").focus();
