@@ -3,8 +3,9 @@
   background-color: #007BFF;
   color: white;
   cursor: pointer;
-  padding: 1px;
-  width: 25%;
+  padding: 15px;
+  font-weight: bold;
+  width: 200px;
   border: none;
   border-radius: 12px;
   text-align: center;
