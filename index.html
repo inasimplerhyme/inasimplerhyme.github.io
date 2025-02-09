@@ -19,8 +19,7 @@
 	<div class="search-section">
 <picture>
 	<source media="(min-width: 480px)"
-	srcset="theHBO80sdbBIG.png,
-	theHBO80sDBdiffSizesMED.png"
+	srcset="theHBO80sdbMED.png"
 	sizes="80vw"
 	<h1><img src="theHBO80sdbsmall.png" alt="logo"></h1>
 </picture>
@@ -32203,10 +32202,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Trigger search when pressing Enter
     searchInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            searchTable();
-        }
-    });
+    if (event.key === "Enter") {
+        searchTable();
+        scrollToResults(); // Ensure scrolling happens when pressing Enter
+    }
+});
 
     // Trigger search when clicking the button
     searchButton.addEventListener("click", function () {
