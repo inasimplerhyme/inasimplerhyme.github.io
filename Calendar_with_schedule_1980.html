@@ -14,7 +14,26 @@
 	.search-by-name {
 	font-family: Arial Black, sans-serif;
 	background-color: white;
+	
+	
 	}
+
+	.search-by-name a {
+
+	    text-decoration: none;
+	    color: black;
+	    font-weight: bold;
+	    background-color: white;
+	    display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+	    transition: background-color 0.3s ease;
+
+	}
+	
+	.search-highlight:hover { background-color: lightgrey; }
+	
+	
         .calendar-container {
             display: flex;
             flex-wrap: wrap;
@@ -37,10 +56,31 @@
         }
 	.years-display {
             width: calc(100% / 9); /* 9 columns */
+
+        }
+	
+
+.years-display a {
+	    text-decoration: none;
+	    color: black;
+	    font-weight: bold;
 	    background-color: white;
+	    display: inline-block;
             text-align: center;
             box-sizing: border-box;
-        }
+	    transition: background-color 0.3s ease;
+	}
+
+	    .year-1981:hover { background-color: lightblue; }
+	    .year-1982:hover { background-color: lightgreen; }
+	    .year-1983:hover { background-color: lightcoral; }
+	    .year-1984:hover { background-color: lightsalmon; }
+	    .year-1985:hover { background-color: lightpink; }
+	    .year-1986:hover { background-color: lightgoldenrodyellow; }
+	    .year-1987:hover { background-color: lightseagreen; }
+	    .year-1988:hover { background-color: lightsteelblue; }
+	    .year-1989:hover { background-color: lightgray; }
+
         .month-section h2 {
             background-color: green;
             color: white;
@@ -59,6 +99,7 @@
             justify-content: center;
             margin: 0;
             padding: 5px 0;
+	    
         }
         .days-header h3, .date-cell {
             margin: 0 5px;
@@ -75,6 +116,8 @@
             background-color: white;
             color: black;
             font-size: 1em;
+	    
+	    
         }
         @media (max-width: 768px) {
             .month-section {
@@ -131,12 +174,15 @@
                 width: 100%;
                 margin-bottom: 20px;
             }
+	.years-display
+	width: calc(100% / 3); /* 3 columns */
+	
         }
     </style>
 </head>
 <body>
 <div class="search-by-name">
-	<span class="search-by-name"><a href="index.html">SEARCH BY NAME</a></span>
+	<span class="search-by-name"><a href="index.html" class="search-highlight">SEARCH BY NAME</a></span>
 	</div>
 
 	<p> </p>
@@ -145,31 +191,31 @@
 
 	<!-- Years -->
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1981.html">1981</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1981.html" class="year-1981">1981</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1982.html">1982</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1982.html" class="year-1982">1982</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1983.html">1983</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1983.html" class="year-1983">1983</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1984.html">1984</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1984.html" class="year-1984">1984</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1985.html">1985</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1985.html" class="year-1985">1985</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1986.html">1986</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1986.html" class="year-1986">1986</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1987.html">1987</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1987.html" class="year-1987">1987</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1988.html">1988</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1988.html" class="year-1988">1988</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1989.html">1989</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1989.html" class="year-1989">1989</a></span>
 
 	<p> </p>
 
