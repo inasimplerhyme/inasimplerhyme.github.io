@@ -41,8 +41,17 @@
 	background-color: white;
 	}
 	.search-by-date a {
-	color: black;
+	    color: black;
+	    font-weight: bold;
+	    background-color: white;
+	    padding: 10px;
+	    display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+	    transition: background-color 0.3s ease;
 	}
+	.search-by-date a:hover { background-color: lightgrey; }
+
 	.words-of-caution-container {
             display: flex;
             flex-wrap: wrap;
