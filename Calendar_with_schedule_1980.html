@@ -55,7 +55,7 @@
             margin-bottom: 20px;
         }
 	.years-display {
-	    display: flex;
+
             width: calc(100% / 9); /* 9 columns */
 
         }
@@ -66,7 +66,7 @@
 	    color: black;
 	    font-weight: bold;
 	    background-color: white;
-	    display: inline-block;
+	    flex-wrap:wrap;
 	    padding: 10px 15px;
 	    border: 2px solid black;
 	    border-radius: 5px;
@@ -119,10 +119,23 @@
         .date-cell {
             background-color: white;
             color: black;
-            font-size: 1em;
-	    
+            font-size: 1em;   
 	    
         }
+
+	.date-cell a {
+	    text-decoration: none;
+	    color: black;
+	    font-weight: bold;	
+	    display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+	    transition: background-color 0.3s ease;
+
+	}
+
+	.date-cell:hover { background-color: lightgray; }
+
         @media (max-width: 768px) {
             .month-section {
                 width: 100%;
@@ -176,10 +189,8 @@
         @media (max-width: 768px) {
             .schedule-section {
                 width: 100%;
-                margin-bottom: 20px;
+                
             }
-	.years-display a
-	width: calc(100% / 3); /* 3 columns */
 
 	
         }
@@ -227,11 +238,10 @@
 	</div>
     <header>
 <picture>
-	<source media="(min-width: 480px)"
-	srcset="years/HBO-1980-DB-Horiz-MED.png"
-	sizes="80vw"
-        <h1><img src="years/HBO-1980-DB-BIG-Small.png" alt="1980"</h1>
+    <source media="(min-width: 480px)" srcset="years/HBO-1980-DB-Horiz-MED.png 800w" sizes="80vw">
+    <img src="years/HBO-1980-DB-BIG-Small.png" alt="1980">
 </picture>
+
     </header>
 
   
