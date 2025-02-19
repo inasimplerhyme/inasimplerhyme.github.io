@@ -40,6 +40,9 @@
 	font-family: Arial Black, sans-serif;
 	background-color: white;
 	}
+	.search-by-date a {
+	color: black;
+	}
 	.words-of-caution-container {
             display: flex;
             flex-wrap: wrap;
