@@ -57,6 +57,9 @@
 	.years-display {
 
             width: calc(100% / 9); /* 9 columns */
+         text-align: center;
+            box-sizing: border-box;
+            margin-bottom: 20px;
 
         }
 	
@@ -191,7 +194,12 @@
                 width: 100%;
                 
             }
-
+ 	@media (max-width: 768px) {
+            .years-display {
+                width: 30%;
+	
+                
+            }
 	
         }
     </style>
