@@ -5,21 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1982 Calendar</title>
     <style>
-        body {
+         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: white;
+            background-color: #FFD040;
+        }
+        
+        .search-container {
+        background-color: #FFD040;
+        
         }
 	.search-by-name {
 	font-family: Arial Black, sans-serif;
-	background-color: white;
+
+	
+	
 	}
+
+	.search-by-name a {
+
+	    color: black;
+	    font-weight: bold;
+	    background-color: white;
+	    padding: 10px;
+	    display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+	    transition: background-color 0.3s ease;
+
+	}
+	
+	.search-highlight:hover { background-color: lightgrey; }
+	
+	
         .calendar-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             width: 100%;
+            background-color: white;
         }
         header {
             width: 100%;
@@ -35,18 +60,55 @@
             box-sizing: border-box;
             margin-bottom: 20px;
         }
+
+.years-container {
+    display: grid;
+    background-color: #FFD040;
+    grid-template-columns: repeat(9, 1fr); /* 9 equal columns */
+    gap: 10px; /* Space between boxes */
+    justify-content: center; /* Centers content */
+}
+	.years-display {
+
+         width: calc(100% / 9); /* 9 columns */
+         text-align: center;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+	    
+        }
+	
+
+.years-display a {
+	    text-decoration: none;
+	    color: black;
+	    font-weight: bold;
+	    background-color: white;
+	    flex-wrap:wrap;
+	    padding: 10px 15px;
+	    border: 2px solid black;
+	    border-radius: 5px;
+            text-align: center;
+            box-sizing: border-box;
+	    transition: background-color 0.3s ease;
+	    
+	}
+
+	    .year-1980:hover { background-color: green; }
+	    .year-1981:hover { background-color: #DE1F49; }    
+	    .year-1983:hover { background-color: #1FBFDE; }
+	    .year-1984:hover { background-color: #959595; }
+	    .year-1985:hover { background-color: #A93724; }
+	    .year-1986:hover { background-color: #DB45C0; }
+	    .year-1987:hover { background-color: #686DE4; }
+	    .year-1988:hover { background-color: #1F7BDE; }
+	    .year-1989:hover { background-color: black;color:white; }
+
         .month-section h2 {
             background-color: #FFD040;
             color: white;
             padding: 10px;
             margin: 0;
          }
-	    .years-display {
-            width: calc(100% / 9); /* 9 columns */
-	    background-color: white;
-            text-align: center;
-            box-sizing: border-box;
-        }
         .days-header {
 	    background-color: #FFD040;
             display: flex;
@@ -59,6 +121,7 @@
             justify-content: center;
             margin: 0;
             padding: 5px 0;
+	    
         }
         .days-header h3, .date-cell {
             margin: 0 5px;
@@ -74,18 +137,33 @@
         .date-cell {
             background-color: white;
             color: black;
-            font-size: 1em;
+            font-size: 1em;   
+	    
         }
+
+	.date-cell a {
+	    text-decoration: none;
+	    font-weight: bold;
+	    color: black;
+	    flex-wrap:wrap;
+            text-align: center;
+	    transition: background-color 0.3s ease;
+
+	}
+
+	.date-cell a:hover { background-color: lightblue; }
+
         @media (max-width: 768px) {
             .month-section {
                 width: 100%;
             }
         }
-.schedule-container {
+	.schedule-container {
             display: flex;
             flex-wrap: wrap;
             max-width: 1750px;
             margin: 0 auto;
+            background-color: white;
         }
         .schedule-section {
             width: 25%;
@@ -129,49 +207,59 @@
         @media (max-width: 768px) {
             .schedule-section {
                 width: 100%;
-                margin-bottom: 20px;
+                
             }
+ 	@media (max-width: 768px) {
+            .years-container {
+                 grid-template-columns: repeat(3, 1fr);
+		
+            }
+            }
+	
         }
     </style>
 </head>
 <body>
+<div class="search-container">
 <div class="search-by-name">
-	<span class="search-by-name"><a href="index.html">SEARCH BY NAME</a></span>
+	<span class="search-by-name"><a href="index.html" class="search-highlight">SEARCH BY NAME</a></span>
 	</div>
-
+	</div> <!--Search Container-->
 	<p> </p>
 
-    <div class="calendar-container">
+ 
+
+<div class="years-container">
 
 	<!-- Years -->
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1980.html">1980</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1980.html" class="year-1980">1980</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1981.html">1981</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1981.html" class="year-1981">1981</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1983.html">1983</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1983.html" class="year-1983">1983</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1984.html">1984</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1984.html" class="year-1984">1984</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1985.html">1985</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1985.html" class="year-1985">1985</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1986.html">1986</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1986.html" class="year-1986">1986</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1987.html">1987</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1987.html" class="year-1987">1987</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1988.html">1988</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1988.html" class="year-1988">1988</a></span>
 	</div>
 	<div class="years-display">
-            <span class="years-display"><a href="Calendar_with_schedule_1989.html">1989</a></span>
+            <span class="years-display"><a href="Calendar_with_schedule_1989.html" class="year-1989">1989</a></span>
 
-	<p> </p>
+	</div> <!-- Years Container-->
 
 	</div>
 
@@ -184,7 +272,7 @@
 </picture>
     </header>
 
-
+  <div class="calendar-container">
 	
         <!-- January -->
         <div class="month-section">
