@@ -37,11 +37,7 @@
 	    
 	}
 
-	picture img {
-    	width: 300px;
-    	height: auto;
-   
-}
+
 	.search-by-date {
 	font-family: Arial Black, sans-serif;
 	background-color: white;
@@ -179,7 +175,11 @@ th.times-aired-column, td.times-aired-column {
     th, td {
         display: none;
     }
-
+	picture img {
+    	width: 300px;
+    	height: auto;
+   
+}
     /* Show only these 3 columns */
     th.movies-column, td.movies-column {
         display: table-cell;
@@ -208,6 +208,8 @@ th.times-aired-column, td.times-aired-column {
     /* Hide all columns by default */
     th, td {
         display: none;
+
+	
     }
 
 
