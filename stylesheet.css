@@ -35,7 +35,13 @@
             color: white;
 	    text-align: center;
 	    
-	}	
+	}
+
+	picture img {
+    	width: auto;
+    	height: auto;
+    	max-width: 100%; /* Ensures it scales down if needed */
+}
 	.search-by-date {
 	font-family: Arial Black, sans-serif;
 	background-color: white;
