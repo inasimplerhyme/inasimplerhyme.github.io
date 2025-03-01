@@ -207,12 +207,13 @@ th.times-aired-column, td.times-aired-column {
 @media screen and (max-width: 768px) and (orientation: landscape) {
     /* Hide all columns by default */
     th, td {
-        display: none;
-
-	
+        display: none;	
     }
 
-
+	picture img {
+    	width: 600px;
+    	height: auto;
+}
     th.movies-column, td.movies-column {
         display: table-cell;
         width: 15%; /* Adjust width for mobile readability */
