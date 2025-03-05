@@ -44,6 +44,7 @@
 	}
 	.search-by-date a {
 	    color: black;
+	    text-decoration: none;
 	    font-weight: bold;
 	    background-color: white;
 	    padding: 10px;
