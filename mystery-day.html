@@ -12,6 +12,7 @@
       
       	.search-by-name a {
 
+	    font-family: Arial, sans-serif;
 	    color: black;
 	    text-decoration: none;
 	    font-weight: bold;
@@ -29,6 +30,7 @@
 	}
 		.search-by-date a {
 
+	    font-family: Arial, sans-serif;
 	    color: black;
 	    text-decoration: none;
 	    font-weight: bold;
@@ -43,11 +45,17 @@
 	    transition: background-color 0.3s ease;
 
 	}
-		}
+	
 	
 	.search-highlight:hover { background-color: lightgrey; }
 	
-	
+	}
+
+        @media (max-width: 768px) {
+            .search-container {
+            width: 100%;
+            }
+
       </style>
    </head>
 
@@ -57,7 +65,8 @@
 	<span class="search-by-name"><a href="index.html" class="search-highlight">SEARCH BY NAME</a></span>
 	</div>
 <div class="search-by-date">
-	<span class="search-by-date"><a href="Calendar_with_schedule_1980.html" target="_blank">SEARCH BY DATE</a></span>
+	<span class="search-by-date"><a href="Calendar_with_schedule_1980.html" class="search-highlight">SEARCH BY DATE</a></span>
+
 	</div>
 </div>
 
