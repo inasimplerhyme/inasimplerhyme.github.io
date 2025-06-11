@@ -14,16 +14,17 @@
         
         .search-container {
         background-color: green;
-	
+	display: flex;
+	justify-content: space-between;
         
         }
 	.search-by-name {
+	font-family: Arial Black, sans-serif;	
+	}
+	.about-this-page {
 	font-family: Arial Black, sans-serif;
-
-	
 	
 	}
-
 	.search-by-name a {
 
 	    color: black;
@@ -38,6 +39,20 @@
             box-sizing: border-box;
 	    transition: background-color 0.3s ease;
 
+	}
+
+	.about-this-page a {
+	    color: black;
+	    text-decoration: none;
+	    font-weight: bold;
+	    background-color: white;
+	    border: 2px solid black;
+	    border-radius: 5px;
+	    padding: 10px;
+	    display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+	    transition: background-color 0.3s ease;
 	}
 	
 	.search-highlight:hover { background-color: lightgrey; }
@@ -244,6 +259,11 @@
 <div class="search-container">
 <div class="search-by-name">
 	<span class="search-by-name"><a href="index.html" class="search-highlight">SEARCH BY NAME</a></span>
+	</div>
+
+	<div class="about-this-page">
+	<span class="about-this-page"><a href="about-this-page.html" class="search-highlight">ABOUT THIS SITE...</a></span>
+
 	</div>
 	</div> <!--Search Container-->
 	<p> </p>

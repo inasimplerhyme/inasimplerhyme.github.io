@@ -37,8 +37,20 @@
 	    
 	}
 
+        .search-container {
+        background-color: black;
+	display: flex;
+	justify-content: space-between;
+	
+        
+        }
 
 	.search-by-date {
+	font-family: Arial Black, sans-serif;
+	background-color: black;
+	}
+
+	.about-this-page {
 	font-family: Arial Black, sans-serif;
 	background-color: black;
 	}
@@ -54,6 +66,20 @@
             box-sizing: border-box;
 	    transition: background-color 0.3s ease;
 	}
+
+	.about-this-page a {
+	    color: black;
+	    text-decoration: none;
+	    font-weight: bold;
+	    background-color: white;
+	    border-radius: 5px;
+	    padding: 10px;
+	    display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+	    transition: background-color 0.3s ease;
+	}
+	
 	.search-by-date a:hover { background-color: lightgrey; }
 
 	.words-of-caution-container {
