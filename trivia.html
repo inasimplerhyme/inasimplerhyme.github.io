@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        
+        .search-container {
+        background-color: white;
+	display: flex;
+	justify-content: space-between;
+	
+        
+        }
+	.search-by-name {
+	font-family: Arial Black, sans-serif;
+
+	
+	
+	}
+
+.search-by-date {
+	font-family: Arial Black, sans-serif;
+
+	
+	
+	}
+
+	.search-by-name a {
+
+	    color: black;
+	    text-decoration: none;
+	    font-weight: bold;
+	    background-color: white;
+	    border: 2px solid black;
+	    border-radius: 5px;
+	    padding: 10px;
+	    display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+	    transition: background-color 0.3s ease;
+
+	}
+	
+	    .search-by-date a {
+	    color: black;
+	    text-decoration: none;
+	    font-weight: bold;
+	    background-color: white;
+	    border: 2px solid black;
+	    border-radius: 5px;
+	    padding: 10px;
+	    display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+	    transition: background-color 0.3s ease;
+
+	}
+
+	.search-highlight:hover { background-color: lightblue; }
+	
+	
+
+        header {
+            width: 100%;
+            text-align: center;
+            background-color: white;
+            color: white;
+            padding: 10px 0;
+	    font-size: 28px;
+        }
+ 
+.about-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 6 equal columns */
+    gap: 10px; /* Space between boxes */
+    max-width: 90%; /* Prevents full-screen stretching */
+    margin: 0 auto; /* Centers the entire grid */
+    justify-content: center; /* Helps center if extra space exists *
+}
+	.about-display {
+
+         width: calc(100% / 3); /* 6 columns */
+             text-align: center;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+	    
+        }
+	
+
+.about-display a {
+    display: block; /* Ensures full clickable area */
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+	    
+	}
+
+.current-display a {
+    display: block; /* Ensures full clickable area */
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: lightgrey;
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+	    
+	}
+	    
+           .text-info-container {
+            font-family: Arial, sans-serif;
+	    text-align: center;
+	    margin: 25px;
+	    }
+
+           .footnote-container {
+            font-family: Arial, sans-serif;
+	    text-align: left;
+	    margin: 25px;
+	    }
+
+	.showtime-movies {
+	font-weight: bold;
+	}
+	
+	ul {
+  list-style-type: none;
+}
+
+	.footnote-container {
+    font-family: Arial, sans-serif;
+	    text-align: left;
+	    margin: 25px;
+	    }
+/* Responsive adjustments for mobile devices - horizontal*/
+@media screen and (max-width: 768px) and (orientation: landscape) {
+
+	picture img {
+    	width: 600px;
+    	height: auto;
+   
+	}
+}
+        
+
+
+ 	@media (max-width: 768px) {
+            .about-container {
+        grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+        max-width: 80%; /* Prevents sticking to screen edges */
+		
+            }
+            }
+	
+        
+    </style>
+</head>
+<body>
+<div class="search-container">
+<div class="search-by-name">
+	<span class="search-by-name"><a href="index.html" class="search-highlight">SEARCH BY NAME</a></span>
+	</div>
+	<div class="search-by-date">
+	<span class="search-by-date"><a href="Calendar_with_schedule_1980.html" class="search-highlight">SEARCH BY DATE</a></span>
+
+	</div>
+	</div> <!--Search Container-->
+	<p> </p>
+
+ 
+
+<div class="about-container">
+
+	<!-- Years -->
+	<div class="about-display">
+            <span class="about-display"><a href="About-this-page.html" class="search-highlight">So...why?</a></span>
+	</div>
+	<div class="about-display">
+            <span class="current-display"><a href="javascript:void(0)" class="current-highlight">Trivia</a></span>
+	</div>
+	<div class="about-display">
+            <span class="about-display"><a href="most-aired.html" class="search-highlight">Most Aired</a></span>
+	</div>
+	<div class="about-display">
+            <span class="about-display"><a href="beastmaster.html" class="search-highlight">Hey, Beastmaster's On!</a></span>
+	</div>
+	<div class="about-display">
+            <span class="about-display"><a href="thanks.html" class="search-highlight">Thanks!</a></span>
+	</div>
+	<div class="about-display">
+            <span class="about-display"><a href="contact.html" class="search-highlight">Contact Me!</a></span>
+	</div>
+
+
+	</div> <!-- About Container-->
+
+
+
+    <header>
+
+
+    </header>
+
+  <div class="text-info-container">
+<h1>Trivia!</h1>
+
+	<p>1. The first film HBO produced, under the name <i>HBO Premiere Films</i> (which became <i>HBO Pictures</i> in 1986) was <i>The Terry Fox Story</i>.  It's HBO's third most aired movie of the 80s.</p>
+
+	<p>2. Sept. 5th, 1981 is the first continuous 24 hours of broadcast content, which became the norm for weekends.  Until then, a typical day would last from about 5-6 pm to 12-1 am, with weekends starting sometime in the afternoon.  Yes, HBO would sign off at the end of the night.</p>  
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/HKJ4LyqeyWU?si=VbB18ZdaIWEhmEo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+	<p>3. Dec 26, 1981 is when HBO first went 24 hours a day every day, including weekdays.</p>
+
+	<p>4. Sometimes HBO aired different versions of movies in the same month.  Often they would offer separate dubbed or subtitled foreign films, like <i>Fanny and Alexander</i>, or different versions of films with different ratings, showing PG and R rated versions of <i>Saturday Night Fever</i> and <i>Excalibur</i>.</p>
+
+	<p>5. I believe Wed, July 12, 1989 is when HBO aired the most individual programs in one day in the 80s.  24 different programs aired over 24 hours, starting at midnight.</p> 
+
+	<p>6. In 1984, a deal was struck between Paramount Pictures and HBO's competitor, Showtime, which gave them exclusive rights to many of their films for the next few years.  There were notable exceptions, like <i>Indiana Jones and the Temple of Doom</i>, but many blockbusters never aired on HBO in the 80s.  While not an exhaustive list, here are some notable films never to air on HBO in the 80s:</p>
+
+<div class="showtime-movies">
+<ul>
+	<li><i>Footloose</li>
+	<li>Star Trek III: The Search for Spock</li>
+	<li>Star Trek IV: The Voyage Home</li>
+	<li>Top Secret!</li>
+	<li>Beverly Hills Cop</li>
+	<li>Witness</li>
+	<li>D.A.R.Y.L.</li>
+	<li>Silver Bullet</li>
+	<li>Young Sherlock Holmes</li>
+	<li>Pretty in Pink</li>
+	<li>Top Gun</li>
+	<li>April Fool's Day</li>
+	<li>Ferris Bueller's Day Off</li>
+	<li>Maximum Overdrive</li>
+	<li>Blue Velvet</li>
+	<li>Crocodile Dundee.<sup>1</sup></li>
+	<li>The Dead Zone</i></li>
+
+
+
+	</div>
+	<p>And finally, a tip: If you do a search for just the letter <q>e</q> on the main page, that will display every single program in the database.  You can then sort by different categories: Time Aired, Dates Aired, etc, ascending or descending by clicking on the column header.</p>
+	</div>
+
+	<div class="footnote-container">
+
+<div id="footnote1">1. (<i>Crocodile Dundee II</i> did air in 1989, however.)</div>
+	</div>
+</body>
+</html>

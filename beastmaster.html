@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Beastmaster</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        
+        .search-container {
+        background-color: white;
+	display: flex;
+	justify-content: space-between;
+	
+        
+        }
+	.search-by-name {
+	font-family: Arial Black, sans-serif;
+
+	
+	
+	}
+
+.search-by-date {
+	font-family: Arial Black, sans-serif;
+
+	
+	
+	}
+
+	.search-by-name a {
+
+	    color: black;
+	    text-decoration: none;
+	    font-weight: bold;
+	    background-color: white;
+	    border: 2px solid black;
+	    border-radius: 5px;
+	    padding: 10px;
+	    display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+	    transition: background-color 0.3s ease;
+
+	}
+	
+	    .search-by-date a {
+	    color: black;
+	    text-decoration: none;
+	    font-weight: bold;
+	    background-color: white;
+	    border: 2px solid black;
+	    border-radius: 5px;
+	    padding: 10px;
+	    display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+	    transition: background-color 0.3s ease;
+
+	}
+
+	.search-highlight:hover { background-color: lightblue; }
+	
+	
+
+        header {
+            width: 100%;
+            text-align: center;
+            background-color: white;
+            color: white;
+            padding: 10px 0;
+	    font-size: 28px;
+        }
+ 
+.about-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 6 equal columns */
+    gap: 10px; /* Space between boxes */
+    max-width: 90%; /* Prevents full-screen stretching */
+    margin: 0 auto; /* Centers the entire grid */
+    justify-content: center; /* Helps center if extra space exists *
+}
+	.about-display {
+
+         width: calc(100% / 3); /* 6 columns */
+             text-align: center;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+	    
+        }
+	
+
+.about-display a {
+    display: block; /* Ensures full clickable area */
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+	    
+	}
+
+.current-display a {
+    display: block; /* Ensures full clickable area */
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: lightgrey;
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+	    
+	}
+	    
+           .text-info-container {
+            font-family: Arial, sans-serif;
+	    text-align: center;
+	    margin: 25px;
+	    }
+
+           .footnote-container {
+            font-family: Arial, sans-serif;
+	    text-align: left;
+	    margin: 25px;
+	    }
+
+/* Responsive adjustments for mobile devices - horizontal*/
+@media screen and (max-width: 768px) and (orientation: landscape) {
+
+	picture img {
+    	width: 600px;
+    	height: auto;
+   
+	}
+}
+        
+
+
+ 	@media (max-width: 768px) {
+            .about-container {
+        grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+        max-width: 80%; /* Prevents sticking to screen edges */
+		
+            }
+            }
+	
+        
+    </style>
+</head>
+<body>
+<div class="search-container">
+<div class="search-by-name">
+	<span class="search-by-name"><a href="index.html" class="search-highlight">SEARCH BY NAME</a></span>
+	</div>
+	<div class="search-by-date">
+	<span class="search-by-date"><a href="Calendar_with_schedule_1980.html" class="search-highlight">SEARCH BY DATE</a></span>
+
+	</div>
+	</div> <!--Search Container-->
+	<p> </p>
+
+ 
+
+<div class="about-container">
+
+	<!-- Years -->
+	<div class="about-display">
+            <span class="about-display"><a href="About-this-page.html" class="search-highlight">So...why?</a></span>
+	</div>
+	<div class="about-display">
+            <span class="about-display"><a href="trivia.html" class="search-highlight">Trivia</a></span>
+	</div>
+	<div class="about-display">
+            <span class="about-display"><a href="most-aired.html" class="search-highlight">Most Aired</a></span>
+	</div>
+	<div class="about-display">
+            <span class="current-display"><a href="javascript:void(0)" class="current-highlight">Hey, Beastmaster's On!</a></span>
+	</div>
+	<div class="about-display">
+            <span class="about-display"><a href="thanks.html" class="search-highlight">Thanks!</a></span>
+	</div>
+	<div class="about-display">
+            <span class="about-display"><a href="contact.html" class="search-highlight">Contact Me!</a></span>
+	</div>
+
+
+	</div> <!-- About Container-->
+
+
+
+    <header>
+
+
+    </header>
+
+  <div class="text-info-container">
+<h1>HBO: Hey, Beastmaster's On!</h1>
+
+<p>When people reminisce about watching HBO in the 80s, one film that always comes up in conversation is <i>The Beastmaster</i>.  The joke was that HBO stood for <i>Hey, Beastmaster's On.</i>  So was <i>The Beastmaster</i> one of HBO's most aired films in the 80s?</p>
+
+	<p>No. And it's not even close.</p>
+
+	<p><i>The Beastmaster</i> aired 23 times in the 80s, along with 42 other films that aired that same amount, but 348 movies aired <i>more</i> than <i>The Beastmaster</i> did, making it and the other 42 pictures tied for the 30th most aired film on HBO in the 80s.</p>
+
+	<p>That's not really near the top of the list, so why is that film singled out?  Tough to say. I think for many people, the only reason they ever saw the film was because it was on HBO, and then perhaps when it was later aired on other networks like TBS or USA, that HBO connection was already made.  Who knows?</p>
+
+
+	</div>
+
+
+
+</body>
+</html>
