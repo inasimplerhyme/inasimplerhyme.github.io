@@ -8,7 +8,7 @@ $secret = '6LfhIF8rAAAAAFJIOeV0e-u7tl4ejyJZp6nwSQkG';
 if (!empty($_POST)) {
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $name = $_POST['subject'];
+    $subject = $_POST['subject'];
     $message = $_POST['message'];
     $recaptchaResponse = $_POST['g-recaptcha-response'];
 
@@ -16,7 +16,7 @@ if (!empty($_POST)) {
     $verify = json_decode(file_get_contents($recaptchaUrl));
 
     if (!$verify->success) {
-      $errors[] = 'Recaptcha failed';
+        $errors[] = 'Recaptcha failed';
     }
 
     if (empty($name)) {
@@ -33,101 +33,24 @@ if (!empty($_POST)) {
         $errors[] = 'Message is empty';
     }
 
-
     if (!empty($errors)) {
         $allErrors = join('<br/>', $errors);
         $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
     } else {
         $toEmail = 'hbo80sdb@gmail.com';
-        $emailSubject = 'New email from your content form';
-        $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
+        $emailSubject = 'New email from your contact form';
+        $headers = "From: {$email}\r\n";
+        $headers .= "Reply-To: {$email}\r\n";
+        $headers .= "Content-Type: text/html; charset=iso-8859-1\r\n";
 
-        $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
-        $body = join(PHP_EOL, $bodyParagraphs);
+        $body = nl2br("Name: {$name}\nEmail: {$email}\nSubject: {$subject}\nMessage:\n{$message}");
 
         if (mail($toEmail, $emailSubject, $body, $headers)) {
             header('Location: thank-you.html');
+            exit;
         } else {
             $errorMessage = "<p style='color: red;'>Oops, something went wrong. Please try again later</p>";
         }
     }
 }
-
 ?>
-
-<html>
-<body>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
-  <form action="/action-page.php" method="post" id="contact-form">
-    <h2>Contact us</h2>
-
-    <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
-    <p>
-      <label>First Name:</label>
-      <input name="name" type="text"/>
-    </p>
-    <p>
-      <label>Email Address:</label>
-      <input style="cursor: pointer;" name="email" type="text"/>
-    </p>
-    <p>
-      <label>Message:</label>
-      <textarea name="message"></textarea>
-    </p>
-
-    <p>
-      <button
-        class="g-recaptcha"
-        type="submit"
-        data-sitekey="6LfhIF8rAAAAAKl6viJPbCw4Ly0fbtew5_BbBn10"
-        data-callback='onRecaptchaSuccess'
-      >
-        Submit
-      </button>
-    </p>
-  </form>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-  <script>
-      const constraints = {
-          name: {
-              presence: {allowEmpty: false}
-          },
-          email: {
-              presence: {allowEmpty: false},
-              email: true
-          },
-          message: {
-              presence: {allowEmpty: false}
-          }
-      };
-
-      const form = document.getElementById('contact-form');
-
-      form.addEventListener('submit', function (event) {
-          const formValues = {
-              name: form.elements.name.value,
-              email: form.elements.email.value,
-              message: form.elements.message.value
-          };
-
-          const errors = validate(formValues, constraints);
-
-          if (errors) {
-              event.preventDefault();
-              const errorMessage = Object
-                  .values(errors)
-                  .map(function (fieldValues) {
-                      return fieldValues.join(', ')
-                  })
-                  .join("\n");
-
-              alert(errorMessage);
-          }
-      }, false);
-
-      function onRecaptchaSuccess () {
-          document.getElementById('contact-form').submit()
-      }
-  </script>
-</body>
-</html>
