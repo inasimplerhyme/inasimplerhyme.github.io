@@ -250,8 +250,13 @@ input[type=submit]:hover {
 	</div>
 
 <div class="container">
-  <form method="POST" action="action_page.php" id="contact-form">
+  <form action="https://formsubmit.co/hbo80sdb@gmail.com" method="POST" id="contact-form">
 
+    <!-- Hidden Inputs for Formsubmit -->
+    <input type="hidden" name="_next" value="thank-you.html">
+    <input type="hidden" name="_captcha" value="true">
+    <input type="hidden" name="_template" value="box">
+    
     <label for="name">Name</label>
     <input type="text" id="name" name="name" placeholder="Your name...">
 
