@@ -39,7 +39,7 @@ if (!empty($_POST)) {
         $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
     } else {
         $toEmail = 'hbo80sdb@gmail.com';
-        $emailSubject = 'New email from your contant form';
+        $emailSubject = 'New email from your content form';
         $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
 
         $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
@@ -58,7 +58,7 @@ if (!empty($_POST)) {
 <html>
 <body>
   <script src="https://www.google.com/recaptcha/api.js"></script>
-  <form action="/form.php" method="post" id="contact-form">
+  <form action="/action-page.php" method="post" id="contact-form">
     <h2>Contact us</h2>
 
     <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
