@@ -3,21 +3,11 @@
 $errors = [];
 $errorMessage = '';
 
-$secret = '6LfhIF8rAAAAAFJIOeV0e-u7tl4ejyJZp6nwSQkG';
-
 if (!empty($_POST)) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
-    $recaptchaResponse = $_POST['g-recaptcha-response'];
-
-    $recaptchaUrl = "https://www.google.com/recaptcha/api/siteverify?secret={$secret}&response={$recaptchaResponse}";
-    $verify = json_decode(file_get_contents($recaptchaUrl));
-
-    if (!$verify->success) {
-        $errors[] = 'Recaptcha failed';
-    }
 
     if (empty($name)) {
         $errors[] = 'Name is empty';
@@ -54,3 +44,80 @@ if (!empty($_POST)) {
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form</title>
+</head>
+<body>
+  <form action="action_page.php" method="post" id="contact-form">
+    <h2>Contact Us</h2>
+
+    <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
+
+    <p>
+      <label>Name:</label><br>
+      <input name="name" type="text">
+    </p>
+    <p>
+      <label>Email Address:</label><br>
+      <input name="email" type="text">
+    </p>
+    <p>
+      <label>Subject:</label><br>
+      <input name="subject" type="text">
+    </p>
+    <p>
+      <label>Message:</label><br>
+      <textarea name="message" rows="6" cols="40"></textarea>
+    </p>
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </form>
+
+  <!-- Optional client-side validation -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <script>
+    const constraints = {
+        name: {
+            presence: {allowEmpty: false}
+        },
+        email: {
+            presence: {allowEmpty: false},
+            email: true
+        },
+        subject: {
+            presence: {allowEmpty: false}
+        },
+        message: {
+            presence: {allowEmpty: false}
+        }
+    };
+
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function (event) {
+        const formValues = {
+            name: form.elements.name.value,
+            email: form.elements.email.value,
+            subject: form.elements.subject.value,
+            message: form.elements.message.value
+        };
+
+        const errors = validate(formValues, constraints);
+
+        if (errors) {
+            event.preventDefault();
+            const errorMessage = Object
+                .values(errors)
+                .map(fieldErrors => fieldErrors.join(', '))
+                .join("\n");
+            alert(errorMessage);
+        }
+    }, false);
+  </script>
+</body>
+</html>
