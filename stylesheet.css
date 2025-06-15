@@ -139,6 +139,7 @@ button#searchButton:hover {
 }
 
 
+
 #dataTable {
     max-width: 100%;
     overflow-x: auto; /* Enables horizontal scroll */
@@ -190,7 +191,28 @@ th.times-aired-column, td.times-aired-column {
     width: 3%;
 }
 
-.page-link.active {
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination .page-link {
+    margin: 0 3px;
+    padding: 6px 10px;
+    background-color: #eee;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+#pagination    .page-link:hover {
+    background-color: #007BFF;
+    
+}
+
+#pagination .page-link.active {
     background-color: #007bff; /* Blue background */
     color: white; /* White text */
     border: 1px solid #007bff; /* Match border color */
