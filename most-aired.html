@@ -21806,8 +21806,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
 
-    // Automatically focus on the search input field
+// Focus search field only on non-mobile devices
+if (!/Mobi|Android/i.test(navigator.userAgent)) {
     searchInput.focus();
+}
+
 
     let currentPage = 1;
     let rowsPerPage = parseInt(rowsPerPageDropdown.value);
