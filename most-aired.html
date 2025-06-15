@@ -160,6 +160,27 @@
     margin: 0 auto; /* Centers the container */
 }
 
+
+
+button#searchButton {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+button#searchButton:hover {
+    background-color: #0056b3;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+   background-color: #0056b3;
+}
+
 #dataTable {
     max-width: 100%;
     overflow-x: auto; /* Enables horizontal scroll */
@@ -352,9 +373,13 @@ th.times-aired-column, td.times-aired-column {
 
 	<p>These are all the movies aired by HBO in the 80s, whether theatrical releases or made-for-TV, ranked by views.</p>
 
+<!--	Search Section -->
 
+<h2>Search:</h2>
  <div class="Table-Header"> 
-
+<input type="text" id="searchInput" placeholder="Enter search term..." spellcheck="false" autocomplete="off">
+<button id="searchButton">Search</button>
+<p></p>
     <span> Rows per page: </span> <select id="rowsPerPage">
         <option value="10">10</option>
         <option value="20">20</option>
@@ -364,7 +389,8 @@ th.times-aired-column, td.times-aired-column {
 	<option value="5000">All Rows</option>
     </select>
 <p></p>
-<div class="movies-container">
+<div class="results-container">
+<div id="searchResults">
 <table id="dataTable">
     <thead>
       
@@ -21767,6 +21793,7 @@ th.times-aired-column, td.times-aired-column {
 
 </div>
 </div>
+</div>
 	</div> <!-- Text Info Container -->
 
 
@@ -21776,22 +21803,32 @@ document.addEventListener("DOMContentLoaded", function () {
     const tbody = table.tBodies[0];
     const rows = Array.from(tbody.rows);
     const rowsPerPageDropdown = document.getElementById("rowsPerPage");
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+
+    // Automatically focus on the search input field
+    searchInput.focus();
+
     let currentPage = 1;
     let rowsPerPage = parseInt(rowsPerPageDropdown.value);
+    let filteredRows = rows.slice(); // Start with all rows
 
     function displayRows() {
         const start = (currentPage - 1) * rowsPerPage;
         const end = start + rowsPerPage;
 
-        rows.forEach((row, index) => {
+        rows.forEach(row => row.style.display = "none"); // Hide all
+        filteredRows.forEach((row, index) => {
             row.style.display = (rowsPerPage >= 5000 || (index >= start && index < end)) ? "" : "none";
         });
     }
 
     function renderPagination() {
-        const totalPages = Math.ceil(rows.length / rowsPerPage);
         const pagination = document.getElementById("pagination");
         pagination.innerHTML = "";
+
+        const totalPages = Math.ceil(filteredRows.length / rowsPerPage);
+        if (totalPages <= 1) return;
 
         for (let i = 1; i <= totalPages; i++) {
             const pageLink = document.createElement("button");
@@ -21809,6 +21846,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function performSearch() {
+        const filter = searchInput.value.toLowerCase().trim();
+        if (!filter) {
+            filteredRows = rows.slice();
+        } else {
+            filteredRows = rows.filter(row => {
+                return Array.from(row.cells).some(cell =>
+                    cell.textContent.toLowerCase().includes(filter)
+                );
+            });
+        }
+        currentPage = 1;
+        displayRows();
+        renderPagination();
+    }
+
+    searchButton.addEventListener("click", performSearch);
+    searchInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") performSearch();
+    });
+
     rowsPerPageDropdown.addEventListener("change", function () {
         rowsPerPage = parseInt(this.value);
         currentPage = 1;
@@ -21820,6 +21878,7 @@ document.addEventListener("DOMContentLoaded", function () {
     renderPagination();
 });
 </script>
+
 
 
 
