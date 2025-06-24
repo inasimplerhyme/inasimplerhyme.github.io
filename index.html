@@ -37403,10 +37403,25 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        if (matches.length === 0 || !filter) {
-            table.style.display = "none";
-            return;
-        }
+if (matches.length === 0) {
+    table.style.display = "table"; // Keep table visible to show message
+
+    const noResultRow = document.createElement("tr");
+    noResultRow.id = "no-results-row";
+
+    const td = document.createElement("td");
+    td.colSpan = table.rows[0].cells.length;
+    td.style.textAlign = "center";
+    td.style.fontStyle = "italic";
+    td.textContent = "Sorry, no search results.";
+
+    noResultRow.appendChild(td);
+    tbody.appendChild(noResultRow);
+
+    renderPagination(0); // No pagination needed
+    return;
+}
+
 
         table.style.display = "table";
 
