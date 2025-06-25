@@ -221,6 +221,17 @@ th.times-aired-column, td.times-aired-column {
     border-radius: 4px; /* Rounded corners */
     font-weight: bold; /* Make the font bold */
 }
+
+#no-results-row td {
+  display: table-cell !important;
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  padding: 1em;
+  background-color: black;
+  border: 1px solid #ccc;
+}
+
 /* Responsive adjustments for mobile devices - vertical*/
 @media screen and (max-width: 768px) and (orientation: portrait) {
     /* Hide all columns by default */

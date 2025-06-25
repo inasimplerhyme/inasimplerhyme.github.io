@@ -37437,7 +37437,8 @@ if (matches.length === 0) {
     noResultRow.id = "no-results-row";
 
     const td = document.createElement("td");
-    td.colSpan = table.rows[0].cells.length;
+    const columnCount = table.rows[0]?.cells.length || 1;
+    td.colSpan = columnCount;
     td.style.textAlign = "center";
     td.style.fontStyle = "italic";
     td.textContent = "Sorry, no search results.";
