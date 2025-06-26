@@ -192,6 +192,10 @@ th.dates-aired-column, td.dates-aired-column {
 th.times-aired-column, td.times-aired-column {
     width: 3%;
 }
+th.metadata-column, td.metadata-column {
+    width: 0%;
+    display: none;
+}
 
 #pagination {
     text-align: center;
