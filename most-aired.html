@@ -21793,21 +21793,86 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
 
-// Focus search field only on non-mobile devices
-if (!/Mobi|Android/i.test(navigator.userAgent)) {
-    searchInput.focus();
-}
+    // Outside message (for stacked/portrait mode)
+    const noResults = document.createElement("div");
+    noResults.id = "noResultsMsg";
+    noResults.setAttribute("role", "status");
+    noResults.setAttribute("aria-live", "polite");
+    noResults.style.display = "none";
+    noResults.style.textAlign = "center";
+    noResults.style.fontStyle = "italic";
+    noResults.style.padding = "0.75rem";
+    table.parentNode.insertBefore(noResults, table.nextSibling);
 
+    // Focus search field only on non-mobile devices
+    if (!/Mobi|Android/i.test(navigator.userAgent)) {
+        searchInput.focus();
+    }
 
     let currentPage = 1;
     let rowsPerPage = parseInt(rowsPerPageDropdown.value);
     let filteredRows = rows.slice(); // Start with all rows
 
+    // Detects stacked/portrait layout where <tr> isn't rendered as table-row
+    function isStackedTable() {
+        const first = tbody.rows[0];
+        if (!first) return false;
+        const disp = window.getComputedStyle(first).display;
+        return disp !== "table-row";
+    }
+
+    function removeNoResultsRow() {
+        const existing = document.getElementById("no-results-row");
+        if (existing) existing.remove();
+    }
+
+    function addNoResultsRow() {
+        const noResultRow = document.createElement("tr");
+        noResultRow.id = "no-results-row";
+        const td = document.createElement("td");
+        td.colSpan = table.rows[0]?.cells.length || 1;
+        td.style.textAlign = "center";
+        td.style.fontStyle = "italic";
+        td.style.padding = "0.75rem";
+        td.textContent = "Sorry, no search results.";
+        noResultRow.appendChild(td);
+        tbody.appendChild(noResultRow);
+    }
+
+    function showNoResults() {
+        if (isStackedTable()) {
+            removeNoResultsRow();
+            noResults.textContent = "Sorry, no search results.";
+            noResults.style.display = "block";
+        } else {
+            noResults.style.display = "none";
+            addNoResultsRow();
+        }
+    }
+
+    function hideNoResults() {
+        noResults.textContent = "";
+        noResults.style.display = "none";
+        removeNoResultsRow();
+    }
+
     function displayRows() {
         const start = (currentPage - 1) * rowsPerPage;
         const end = start + rowsPerPage;
 
-        rows.forEach(row => row.style.display = "none"); // Hide all
+        rows.forEach(row => row.style.display = "none");
+
+        if (filteredRows.length === 0) {
+            hideNoResults();      // reset
+            showNoResults();      // then show appropriate message
+            // also clear pagination
+            const pagination = document.getElementById("pagination");
+            if (pagination) pagination.innerHTML = "";
+            return;
+        }
+
+        hideNoResults();
+
         filteredRows.forEach((row, index) => {
             row.style.display = (rowsPerPage >= 5000 || (index >= start && index < end)) ? "" : "none";
         });
@@ -21815,22 +21880,22 @@ if (!/Mobi|Android/i.test(navigator.userAgent)) {
 
     function renderPagination() {
         const pagination = document.getElementById("pagination");
+        if (!pagination) return;
         pagination.innerHTML = "";
 
         const totalPages = Math.ceil(filteredRows.length / rowsPerPage);
-        if (totalPages <= 1) return;
+        if (filteredRows.length === 0 || totalPages <= 1) return;
 
         for (let i = 1; i <= totalPages; i++) {
             const pageLink = document.createElement("button");
             pageLink.textContent = i;
             pageLink.classList.add("page-link");
-            if (i === currentPage) {
-                pageLink.classList.add("active");
-            }
+            if (i === currentPage) pageLink.classList.add("active");
             pageLink.addEventListener("click", function () {
                 currentPage = i;
                 displayRows();
                 renderPagination();
+                table.scrollIntoView({ behavior: "smooth", block: "start" });
             });
             pagination.appendChild(pageLink);
         }
@@ -21838,15 +21903,17 @@ if (!/Mobi|Android/i.test(navigator.userAgent)) {
 
     function performSearch() {
         const filter = searchInput.value.toLowerCase().trim();
+
         if (!filter) {
             filteredRows = rows.slice();
         } else {
-            filteredRows = rows.filter(row => {
-                return Array.from(row.cells).some(cell =>
+            filteredRows = rows.filter(row =>
+                Array.from(row.cells).some(cell =>
                     cell.textContent.toLowerCase().includes(filter)
-                );
-            });
+                )
+            );
         }
+
         currentPage = 1;
         displayRows();
         renderPagination();
@@ -21864,11 +21931,18 @@ if (!/Mobi|Android/i.test(navigator.userAgent)) {
         renderPagination();
     });
 
+    // Initial render
+    hideNoResults();
     displayRows();
     renderPagination();
-});
 
+    // Re-evaluate on resize / orientation change
+    window.addEventListener("resize", () => {
+        if (filteredRows.length === 0) showNoResults();
+    });
+});
 </script>
+
 
 
 
