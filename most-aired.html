@@ -26893,7 +26893,7 @@ th.metadata-column, td.metadata-column {
 document.addEventListener("DOMContentLoaded", function () {
     // ---- base elements
     const table = document.getElementById("dataTable");
-    if (!table) return; // hard guard
+    if (!table) return; // safety guard
     const tbody = table.tBodies[0];
     if (!tbody) return;
 
@@ -26915,7 +26915,7 @@ document.addEventListener("DOMContentLoaded", function () {
     table.parentNode.insertBefore(noResults, table.nextSibling);
 
     // Focus search field only on non-mobile devices
-    if (!/Mobi|Android/i.test(navigator.userAgent) && searchInput) {
+    if (!/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) && searchInput) {
         searchInput.focus();
     }
 
@@ -27010,6 +27010,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // --- helpers for scrolling ---
+    const HEADER_OFFSET = 72; // adjust to your fixed/sticky header height (in px)
+
     function elementIsOnScreen(el) {
         if (!el) return true;
         const rect = el.getBoundingClientRect();
@@ -27017,13 +27019,19 @@ document.addEventListener("DOMContentLoaded", function () {
         return rect.top >= 0 && rect.bottom <= vh;
     }
 
+    function smoothScrollTo(el, offset = 0) {
+        const rect = el.getBoundingClientRect();
+        const y = rect.top + window.pageYOffset - offset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+    }
+
     function scrollToResultsAfterRender() {
-        // Defer until styles applied
+        // Defer until styles/layout apply
         setTimeout(() => {
             if (filteredRows.length === 0) {
                 const target = isStackedTable() ? noResults : document.getElementById("no-results-row");
                 if (target && !elementIsOnScreen(target)) {
-                    target.scrollIntoView({ behavior: "smooth", block: "center" });
+                    smoothScrollTo(target, HEADER_OFFSET);
                 }
                 return;
             }
@@ -27034,8 +27042,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const target = filteredRows[indexOnPage];
 
             if (target && target.style.display !== "none" && !elementIsOnScreen(target)) {
-                // If you use a sticky header, add CSS:  #dataTable tr { scroll-margin-top: 72px; }
-                target.scrollIntoView({ behavior: "smooth", block: "start" });
+                smoothScrollTo(target, HEADER_OFFSET);
             }
         }, 0);
     }
@@ -27056,7 +27063,15 @@ document.addEventListener("DOMContentLoaded", function () {
         currentPage = 1;
         displayRows();
         renderPagination();
-        scrollToResultsAfterRender();
+
+        // On mobile, collapse the keyboard before scrolling so the target isn't hidden
+        const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        if (isMobile && document.activeElement === searchInput) {
+            searchInput.blur();
+            setTimeout(scrollToResultsAfterRender, 50); // small delay for iOS layout settle
+        } else {
+            scrollToResultsAfterRender();
+        }
     }
 
     // --- listeners
