@@ -12338,12 +12338,17 @@ th.metadata-column, td.metadata-column {
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+    // ---- base elements
     const table = document.getElementById("dataTable");
+    if (!table) return; // safety guard
     const tbody = table.tBodies[0];
+    if (!tbody) return;
+
     const rows = Array.from(tbody.rows);
     const rowsPerPageDropdown = document.getElementById("rowsPerPage");
-    const searchInput = document.getElementById("searchInput");
+    const searchInput  = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
+    const pagination   = document.getElementById("pagination");
 
     // Outside message (for stacked/portrait mode)
     const noResults = document.createElement("div");
@@ -12357,12 +12362,12 @@ document.addEventListener("DOMContentLoaded", function () {
     table.parentNode.insertBefore(noResults, table.nextSibling);
 
     // Focus search field only on non-mobile devices
-    if (!/Mobi|Android/i.test(navigator.userAgent)) {
+    if (!/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) && searchInput) {
         searchInput.focus();
     }
 
     let currentPage = 1;
-    let rowsPerPage = parseInt(rowsPerPageDropdown.value);
+    let rowsPerPage = rowsPerPageDropdown ? parseInt(rowsPerPageDropdown.value) || 10 : 10;
     let filteredRows = rows.slice(); // Start with all rows
 
     // Detects stacked/portrait layout where <tr> isn't rendered as table-row
@@ -12412,13 +12417,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const start = (currentPage - 1) * rowsPerPage;
         const end = start + rowsPerPage;
 
-        rows.forEach(row => row.style.display = "none");
+        rows.forEach(row => { row.style.display = "none"; });
 
         if (filteredRows.length === 0) {
-            hideNoResults();      // reset
-            showNoResults();      // then show appropriate message
-            // also clear pagination
-            const pagination = document.getElementById("pagination");
+            hideNoResults();
+            showNoResults();
             if (pagination) pagination.innerHTML = "";
             return;
         }
@@ -12426,12 +12429,12 @@ document.addEventListener("DOMContentLoaded", function () {
         hideNoResults();
 
         filteredRows.forEach((row, index) => {
-            row.style.display = (rowsPerPage >= 5000 || (index >= start && index < end)) ? "" : "none";
+            const show = rowsPerPage >= 5000 || (index >= start && index < end);
+            row.style.display = show ? "" : "none";
         });
     }
 
     function renderPagination() {
-        const pagination = document.getElementById("pagination");
         if (!pagination) return;
         pagination.innerHTML = "";
 
@@ -12447,14 +12450,52 @@ document.addEventListener("DOMContentLoaded", function () {
                 currentPage = i;
                 displayRows();
                 renderPagination();
-                table.scrollIntoView({ behavior: "smooth", block: "start" });
+                scrollToResultsAfterRender();
             });
             pagination.appendChild(pageLink);
         }
     }
 
+    // --- helpers for scrolling ---
+    const HEADER_OFFSET = 72; // adjust to your fixed/sticky header height (in px)
+
+    function elementIsOnScreen(el) {
+        if (!el) return true;
+        const rect = el.getBoundingClientRect();
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        return rect.top >= 0 && rect.bottom <= vh;
+    }
+
+    function smoothScrollTo(el, offset = 0) {
+        const rect = el.getBoundingClientRect();
+        const y = rect.top + window.pageYOffset - offset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+    }
+
+    function scrollToResultsAfterRender() {
+        // Defer until styles/layout apply
+        setTimeout(() => {
+            if (filteredRows.length === 0) {
+                const target = isStackedTable() ? noResults : document.getElementById("no-results-row");
+                if (target && !elementIsOnScreen(target)) {
+                    smoothScrollTo(target, HEADER_OFFSET);
+                }
+                return;
+            }
+
+            // First row of the *current page*
+            const start = (currentPage - 1) * rowsPerPage;
+            const indexOnPage = Math.max(0, Math.min(start, filteredRows.length - 1));
+            const target = filteredRows[indexOnPage];
+
+            if (target && target.style.display !== "none" && !elementIsOnScreen(target)) {
+                smoothScrollTo(target, HEADER_OFFSET);
+            }
+        }, 0);
+    }
+
     function performSearch() {
-        const filter = searchInput.value.toLowerCase().trim();
+        const filter = (searchInput?.value || "").toLowerCase().trim();
 
         if (!filter) {
             filteredRows = rows.slice();
@@ -12469,35 +12510,46 @@ document.addEventListener("DOMContentLoaded", function () {
         currentPage = 1;
         displayRows();
         renderPagination();
+
+        // On mobile, collapse the keyboard before scrolling so the target isn't hidden
+        const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        if (isMobile && document.activeElement === searchInput) {
+            searchInput.blur();
+            setTimeout(scrollToResultsAfterRender, 50); // small delay for iOS layout settle
+        } else {
+            scrollToResultsAfterRender();
+        }
     }
 
-    searchButton.addEventListener("click", performSearch);
-    searchInput.addEventListener("keydown", function (e) {
-        if (e.key === "Enter") performSearch();
-    });
+    // --- listeners
+    if (searchButton) searchButton.addEventListener("click", performSearch);
+    if (searchInput) {
+        searchInput.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") performSearch();
+        });
+    }
 
-    rowsPerPageDropdown.addEventListener("change", function () {
-        rowsPerPage = parseInt(this.value);
-        currentPage = 1;
-        displayRows();
-        renderPagination();
-    });
+    if (rowsPerPageDropdown) {
+        rowsPerPageDropdown.addEventListener("change", function () {
+            rowsPerPage = parseInt(this.value) || rowsPerPage;
+            currentPage = 1;
+            displayRows();
+            renderPagination();
+            scrollToResultsAfterRender();
+        });
+    }
 
     // Initial render
     hideNoResults();
     displayRows();
     renderPagination();
 
-    // Re-evaluate on resize / orientation change
+    // Re-evaluate no-results placement on resize/orientation
     window.addEventListener("resize", () => {
         if (filteredRows.length === 0) showNoResults();
     });
 });
 </script>
-
-
-
-
 
 
 
