@@ -409,9 +409,7 @@ th.metadata-column, td.metadata-column {
 
 	<h2>These are all the individual TV episodes that appeared on HBO in the 1980s, ranked by the amount of times aired.</h2>
 
-
-
-<div id="series-section-here" class="series-episodes-container">
+<div id="episodes-section-here" class="series-episodes-container">
 
 	<div class="series-episodes-display">
 	
@@ -8616,6 +8614,36 @@ document.addEventListener("DOMContentLoaded", function () {
         if (filteredRows.length === 0) showNoResults();
     });
 });
+
+(function() {
+  // Adjust this to your sticky header height if you have one
+  var HEADER_OFFSET = 72;
+
+  function scrollToHash(h) {
+    if (!h) return;
+    try {
+      var id = decodeURIComponent(h.replace('#',''));
+      var el = document.getElementById(id);
+      if (!el) return;
+      // If you prefer pure CSS, also add scroll-margin-top (see CSS tip below)
+      var y = el.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET;
+      window.scrollTo({ top: y, behavior: 'instant' in window ? 'instant' : 'auto' });
+    } catch (e) {}
+  }
+
+  // Scroll on initial load (after render)
+  window.addEventListener('load', function() {
+    if (location.hash) {
+      // small timeout to allow fonts/images/layout finalize
+      setTimeout(function(){ scrollToHash(location.hash); }, 0);
+    }
+  });
+
+  // Scroll on in-page hash changes (not needed for cross-page, but harmless)
+  window.addEventListener('hashchange', function() {
+    scrollToHash(location.hash);
+  });
+})();
 </script>
 
 
