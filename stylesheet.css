@@ -295,7 +295,7 @@ th.metadata-column, td.metadata-column {
 
     th.ratings-column, td.ratings-column {
     display: table-cell;
-    width: 20%;
+    width: 10%;
     }
     th.runtime-column, td.runtime-column {
     display: table-cell;
@@ -315,7 +315,7 @@ th.metadata-column, td.metadata-column {
     }
     th.description-column, td.description-column {
     display: table-cell;
-    width: 29%;
+    width: 35%;
     white-space: normal; /* Allow text wrapping */
     word-break: break-word; /* Allow breaking at word boundaries */
     overflow-wrap: break-word; /* Ensure compatibility with older browsers */
@@ -323,7 +323,7 @@ th.metadata-column, td.metadata-column {
     }
     th.dates-aired-column, td.dates-aired-column {
         display: table-cell;
-        width: 23%; /* Maintain responsive width */
+        width: 27%; /* Maintain responsive width */
     white-space: normal; /* Allow text wrapping */
     word-break: break-word; /* Allow breaking at word boundaries */
     overflow-wrap: break-word; /* Ensure compatibility with older browsers */
