@@ -160,8 +160,58 @@
 	}
 }
         
-
-
+.schedule-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1750px;
+            margin: 0 auto;
+            background-color: white;
+	    justify-content: center;
+        }
+        .schedule-section {
+          
+            text-align: center;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .schedule-section h2 {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+        .schedule-section h3 {
+            background-color: green;
+            color: black;
+            padding: 10px;
+            margin: 0;
+        }
+        .schedule-list {
+            list-style-type: none;
+            padding: 0 10px;
+            text-align: left;
+        }
+        .schedule-list li {
+            display: flex;
+            justify-content: left;
+            align-items: baseline;
+            margin-bottom: 5px;
+            font-weight: bold; /* Make both times and items bold */
+        }
+        .schedule-time {
+            min-width: 90px;
+            text-align: right;
+            margin-right: 10px;
+        }
+        .schedule-item {
+            text-align: left;
+        }
+        @media (max-width: 768px) {
+            .schedule-section {
+                width: 100%;
+                
+            }
  	@media (max-width: 768px) {
             .about-container {
         grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
@@ -259,7 +309,23 @@
 
 	</div>
 
-	<p>7. The first movie to air on HBO in the '80s was the 1978 Battlestar Galactica at 4 pm, January 1st. At least, that's if your consider the broadcasting day to start at 6 am, as it does in the HBO guides.  If you want to be super specific, and consider the year to start at midnight, then the first film to air was Richard Pryor Filmed Live in Concert at 12:30 am, Jan 1st.   The last movie to air on HBO in the '80s was Beetlejuice on December 31st, 1989 at 8 pm.</p>
+	<p>7. The first movie to air on HBO in the '80s was the 1978 Battlestar Galactica at 4 pm, January 1st.  The last movie to air on HBO in the '80s was Beetlejuice at 8 pm on December 31st, 1989.</p>
+
+	<p>A note about air times:  This site follows the same format as the HBO Guides, which is that the broadcast day starts at 6 am.  Anything that airs before then is considered to have aired the previous day.  So if you want to be super specific, and have midnight be the start of a new day, then the first film to air on HBO in the '80s was Richard Pryor Filmed Live in Concert at 12:30 am, Jan 1st.  Here's what aired after midnight, listed on Dec 31 in the 1979 guide.</p>
+	
+	
+<div class="schedule-container">
+        <div id="Jan1" class="schedule-section">
+            <h2>January 1</h2>
+            <h3>Tuesday</h3>
+            <ul class="schedule-list">
+                <li><span class="schedule-time">12:30 AM</span><span class="schedule-item">Richard Pryor Filmed Live In Concert (R)</span></li>
+                <li><span class="schedule-time">1:30 AM</span><span class="schedule-item">On Location: George Carlin Again!</span></li>
+                <li><span class="schedule-time">3:00 AM</span><span class="schedule-item">On Location: Martin Mull</span></li>
+            </ul>
+        </div>
+        </div>
+	
 
 	<p>And finally, a tip: If you click on <i>Search</i> when the search window is completely empty, that will display every single program in the database.  You can then sort by different categories: Time Aired, Dates Aired, etc, ascending or descending by clicking on the column header.</p>
 	</div>
