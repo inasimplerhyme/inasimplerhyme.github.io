@@ -218,7 +218,25 @@
         max-width: 80%; /* Prevents sticking to screen edges */
 		
             }
+
             }
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* This keeps a 16:9 aspect ratio (9 ÷ 16 = 0.5625) */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 	
         
     </style>
@@ -276,7 +294,17 @@
 
 	<p>2. Sept. 5th, 1981 is the first continuous 24 hours of broadcast content, which became the norm for weekends.  Until then, a typical day would last from about 5-6 pm to 12-1 am, with weekends starting sometime in the afternoon.  Yes, HBO would sign off at the end of the night.</p>  
 
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/HKJ4LyqeyWU?si=VbB18ZdaIWEhmEo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="video-container">
+  <iframe 
+    src="https://www.youtube.com/embed/HKJ4LyqeyWU?si=VbB18ZdaIWEhmEo8" 
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
+
 
 	<p>3. Dec 26, 1981 is when HBO first went 24 hours a day every day, including weekdays.</p>
 
