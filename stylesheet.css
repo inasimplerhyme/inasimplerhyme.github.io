@@ -239,6 +239,12 @@ th.metadata-column, td.metadata-column {
   border: 1px solid #ccc;
 }
 
+	picture img {
+    	max-width: 700px;
+    	height: auto;
+   
+}
+
 /* Responsive adjustments for mobile devices - vertical*/
 @media screen and (max-width: 768px) and (orientation: portrait) {
     /* Hide all columns by default */
