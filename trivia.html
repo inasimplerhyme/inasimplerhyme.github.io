@@ -223,18 +223,19 @@
 .video-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* This keeps a 16:9 aspect ratio (9 ÷ 16 = 0.5625) */
+  padding-bottom: 56.25%; /* 16:9 ratio */
   height: 0;
   overflow: hidden;
 }
 
 .video-container iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+  border: 0; /* replaces frameborder="0" */
+}
+
 }
 	
         
@@ -297,7 +298,6 @@
   <iframe 
     src="https://www.youtube.com/embed/HKJ4LyqeyWU?si=VbB18ZdaIWEhmEo8" 
     title="YouTube video player"
-    frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
@@ -315,23 +315,25 @@
 
 <div class="showtime-movies">
 <ul>
-	<li><i>Footloose</li>
-	<li>Star Trek III: The Search for Spock</li>
-	<li>Star Trek IV: The Voyage Home</li>
-	<li>Top Secret!</li>
-	<li>Beverly Hills Cop</li>
-	<li>Witness</li>
-	<li>D.A.R.Y.L.</li>
-	<li>Silver Bullet</li>
-	<li>Young Sherlock Holmes</li>
-	<li>Pretty in Pink</li>
-	<li>Top Gun</li>
-	<li>April Fool's Day</li>
-	<li>Ferris Bueller's Day Off</li>
-	<li>Maximum Overdrive</li>
-	<li>Blue Velvet</li>
-	<li>Crocodile Dundee.<sup>1</sup></li>
-	<li>The Dead Zone</i></li>
+	<li><i>Footloose</i></li>
+	<li><i>Star Trek III: The Search for Spock</i></li>
+	<li><i>Star Trek IV: The Voyage Home</i></li>
+	<li><i>Top Secret!</i></li>
+	<li><i>Beverly Hills Cop</i></li>
+	<li><i>Witness</i></li>
+	<li><i>D.A.R.Y.L.</i></li>
+	<li><i>Silver Bullet</i></li>
+	<li><i>Young Sherlock Holmes</i></li>
+	<li><i>Pretty in Pink</i></li>
+	<li><i>Top Gun</i></li>
+	<li><i>April Fool's Day</i></li>
+	<li><i>Ferris Bueller's Day Off</i></li>
+	<li><i>Maximum Overdrive</i></li>
+	<li><i>Blue Velvet</i></li>
+	<li><i>Crocodile Dundee.<sup>1</sup></i></li>
+	<li><i>The Dead Zone</i></li>
+	
+	</ul>
 
 
 	</div>
