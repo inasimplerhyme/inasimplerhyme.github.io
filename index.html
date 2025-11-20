@@ -16534,7 +16534,7 @@
 </tr>
 <tr>
      <td class="movies-column">Instant Justice</td>
-     <td class="words-of-description-column">MICHAEL PARÉ<br>A Marine sergeant whips into action after his sister is murdered in Madrid. Justice will be done! With Tawny Kitaen <i>(Bachelor Party)</i>.</td>
+     <td class="words-of-description-column">MICHAEL PARÉ<br>A Marine sergeant whips into action after his sister is murdered in Madrid. Justice will be done! With Tawny Kitaen <i>(Bachelor Party)</i>.</td>
      <td class="words-of-caution-column"><i>AL, V, N</i></td>
      <td class="ratings-column">(R)</td>
      <td class="runtime-column">1:41</td>
@@ -39824,7 +39824,7 @@
 </tr>
 <tr>
      <td class="movies-column">World Championship Boxing (LIVE) Roger Mayweather vs Julio Céaser Chávez</td>
-     <td class="words-of-description-column">LIFE! MAY 13<br>WBC SUPER LIGHTWEIGHT FIGHT<br>WBC SUPER LIGHTWEIGHT CHAMPION<br>ROGER<br>MAYWEATHER<br>VS<br>WBC/WBA LIGHTWEIGHT CHAMPION<br>JULIO CÉSAR CHÁVEZ<br>Undefeated Julia César Chávez goes after the WBC super lightweight title held by Roger Mayweather. Chávez moves up in weight after winning the unified lightweight crown. He clashed with Mayweather in '85, winning a 2nd round TKO. Scheduled for 12 rounds.</td>
+     <td class="words-of-description-column">LIVE! MAY 13<br>WBC SUPER LIGHTWEIGHT FIGHT<br>WBC SUPER LIGHTWEIGHT CHAMPION<br>ROGER<br>MAYWEATHER<br>VS<br>WBC/WBA LIGHTWEIGHT CHAMPION<br>JULIO CÉSAR CHÁVEZ<br>Undefeated Julia César Chávez goes after the WBC super lightweight title held by Roger Mayweather. Chávez moves up in weight after winning the unified lightweight crown. He clashed with Mayweather in '85, winning a 2nd round TKO. Scheduled for 12 rounds.</td>
      <td class="words-of-caution-column"><i></i></td>
      <td class="ratings-column"></td>
      <td class="runtime-column"></td>
@@ -39863,8 +39863,8 @@
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="movies-column"><s>FIGHT NIGHT DOUBLEHEADER! Iron Mike Tyson vs. Donovan "Razor" Ruddock</s> PLUS Julia César Chávez vs.  Sammy Fuentes</td>
-     <td class="words-of-description-column"><s>FIGHT NIGHT DOUBLEHEADER!<br>THE TWO TOP FIGHTERS IN THE WORLD DEFEND THEIR CROWNS</s><br>LIVE<br>NOV. 18<br><s>IRON MIKE TYSON<br>UNDISPUTED HEAVYWEIGHT CHAMPION<br>vs.<br>DONOVAN <q>RAZOR</q> RUDDOCK</s><br>PLUS<br>WBC SUPER LIGHTWEIGHT CHAMPION<br>JULIO CÉSAR CHÁVEZ<br>vs.<br> <s>DONALD CAPLES</s><br>SAMMY FUENTES<br><br><i>[The Tyson fight was canceled and Donald Caples was replaced by Sammy Fuentes. -JS]</i></td>
+     <td class="movies-column"><s>FIGHT NIGHT DOUBLEHEADER! Iron Mike Tyson vs. Donovan "Razor" Ruddock</s> PLUS Julia César Chávez vs. Sammy Fuentes</td>
+     <td class="words-of-description-column"><s>FIGHT NIGHT DOUBLEHEADER!<br>THE TWO TOP FIGHTERS IN THE WORLD DEFEND THEIR CROWNS</s><br>LIVE<br>NOV. 18<br><s>IRON MIKE TYSON<br>UNDISPUTED HEAVYWEIGHT CHAMPION<br>vs.<br>DONOVAN <q>RAZOR</q> RUDDOCK</s><br>PLUS<br>WBC SUPER LIGHTWEIGHT CHAMPION<br>JULIO CÉSAR CHÁVEZ<br>vs.<br> <s>DONALD CAPLES</s><br>SAMMY FUENTES<br><br><i>[The Tyson fight was canceled and Donald Caples was replaced by Sammy Fuentes. -JS]</i></td>
      <td class="words-of-caution-column"><i></i></td>
      <td class="ratings-column"></td>
      <td class="runtime-column"></td>
@@ -41840,10 +41840,11 @@ document.addEventListener("DOMContentLoaded", function () {
       pageBtn.textContent = i;
       pageBtn.classList.add("page-link");
       if (i === currentPage) pageBtn.classList.add("active");
-      pageBtn.addEventListener("click", function () {
-        currentPage = i;
-        searchTable();
-      });
+	pageBtn.addEventListener("click", function () {
+	  currentPage = i;
+	  searchTable();
+	  scrollToResults();   // NEW LINE
+});
       pagination.appendChild(pageBtn);
     }
   }
