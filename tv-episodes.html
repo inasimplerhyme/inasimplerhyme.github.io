@@ -1448,6 +1448,21 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollToHash(location.hash);
   });
 })();
+
+// Fix Chrome not focusing search field when arriving via #hash links
+window.addEventListener("load", function () {
+    const searchInput = document.getElementById("searchInput");
+
+    // Only focus on desktop devices (same rule you already use)
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (!searchInput || isMobile) return;
+
+    // Delay to allow Chrome to finish hash scrolling
+    setTimeout(() => {
+        searchInput.focus();
+    }, 150); // 100–200ms works best across Chrome versions
+});
+
 </script>
 
 
