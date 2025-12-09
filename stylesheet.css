@@ -134,7 +134,7 @@
 }
 
 input[type="text"] {
-    width: 400px; /* Controls the total width of the input area */
+    width: 70%; /* Controls the total width of the input area */
     padding: 10px; /* Adjusts vertical and horizontal space */
     font-size: 18px; /* Increases size by changing text size */
     border: 1px solid #ccc;
@@ -153,7 +153,7 @@ button#searchButton {
 /* Mobile styles */
 @media screen and (max-width: 600px) {
     input[type="text"] {
-        width: 90%;          /* Make it fill the screen */
+        width: 70%;      
         font-size: 14px;      /* Slightly smaller text */
         padding: 10px;        /* Keep it touch-friendly */
         box-sizing: border-box;
@@ -163,7 +163,7 @@ button#searchButton {
    
         margin-top: 10px;     /* Space between input and button */
         font-size: 14px;
-        padding: 14px;
+        padding: 12px;
     }
 }
 
