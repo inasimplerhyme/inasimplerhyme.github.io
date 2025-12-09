@@ -154,15 +154,15 @@ button#searchButton {
 @media screen and (max-width: 600px) {
     input[type="text"] {
         width: 90%;          /* Make it fill the screen */
-        font-size: 16px;      /* Slightly smaller text */
-        padding: 12px;        /* Keep it touch-friendly */
+        font-size: 14px;      /* Slightly smaller text */
+        padding: 10px;        /* Keep it touch-friendly */
         box-sizing: border-box;
     }
 
     button#searchButton {
    
         margin-top: 10px;     /* Space between input and button */
-        font-size: 16px;
+        font-size: 14px;
         padding: 14px;
     }
 }
