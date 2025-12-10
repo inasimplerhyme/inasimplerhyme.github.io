@@ -191,15 +191,24 @@
 	    
 	}
 
+input[type="text"] {
+    width: 70%; /* Controls the total width of the input area */
+    padding: 10px; /* Adjusts vertical and horizontal space */
+    font-size: 18px; /* Increases size by changing text size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
 button#searchButton {
-    padding: 5px 10px;
+    padding: 13px 10px;
     background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
 }
+
 
 
 button#searchButton:hover {
@@ -291,8 +300,15 @@ th.metadata-column, td.metadata-column {
 }
 
 
+
 /* Responsive adjustments for mobile devices - vertical*/
 @media screen and (max-width: 768px) and (orientation: portrait) {
+    input[type="text"] {
+        width: 70%;      
+        font-size: 14px;      /* Slightly smaller text */
+        padding: 10px;        /* Keep it touch-friendly */
+        box-sizing: border-box;
+    }
     /* Hide all columns by default */
     th, td {
         display: none;
@@ -576,7 +592,7 @@ th.metadata-column, td.metadata-column {
      <td class="rankings-column">11</td>
      <td class="most-aired-column">11th</td>
      <td class="movies-column">Seabert</td>
-     <td class="times-aired-column">231</td>
+     <td class="times-aired-column">233</td>
      <td class="words-of-description-column"><i>[No general show description provided. -JS]</i></td>
      <td class="ratings-column"></td>
      <td class="runtime-column"></td>
@@ -609,7 +625,7 @@ th.metadata-column, td.metadata-column {
      <td class="rankings-column">14</td>
      <td class="most-aired-column">14th</td>
      <td class="movies-column">Babar</td>
-     <td class="times-aired-column">169</td>
+     <td class="times-aired-column">167</td>
      <td class="words-of-description-column"><b>Spend a special evening with Babar on Monday, April 3.</b> <q>A surefire winner with family audiences everywhere</q> <i>(Variety.)</i></td>
      <td class="ratings-column"></td>
      <td class="runtime-column"></td>
@@ -872,6 +888,17 @@ th.metadata-column, td.metadata-column {
 <tr>
      <td class="rankings-column">38</td>
      <td class="most-aired-column">35th (tie)</td>
+     <td class="movies-column">The <i>Candid</i> Candid Camera</td>
+     <td class="times-aired-column">47</td>
+     <td class="words-of-description-column">Allen Funt’s camera goes naughty but nutty in this new adult version of his long-running favorite.  See what you've always wanted to see on this very <b>Candid</b> Candid Camera—and never could until now. An HBO exclusive, not to be missed.</td>
+     <td class="ratings-column"></td>
+     <td class="runtime-column"></td>
+     <td class="words-of-caution-column"><i></i></td>
+     <td class="metadata-column"></td>
+</tr>
+<tr>
+     <td class="rankings-column">39</td>
+     <td class="most-aired-column">35th (tie)</td>
      <td class="movies-column">Emma and Grandpa</td>
      <td class="times-aired-column">47</td>
      <td class="words-of-description-column">Travel through the seasons with six-year-old Emma and her grandfather as he helps her discover the joys of the country woods and fields.</td>
@@ -881,7 +908,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Joy Whitby Stars Emma HelmerAlan MansonShelley Winters</td>
 </tr>
 <tr>
-     <td class="rankings-column">39</td>
+     <td class="rankings-column">40</td>
      <td class="most-aired-column">35th (tie)</td>
      <td class="movies-column">Money Matters</td>
      <td class="times-aired-column">47</td>
@@ -890,17 +917,6 @@ th.metadata-column, td.metadata-column {
      <td class="runtime-column"></td>
      <td class="words-of-caution-column"><i></i></td>
      <td class="metadata-column">Financial Literacy Special</td>
-</tr>
-<tr>
-     <td class="rankings-column">40</td>
-     <td class="most-aired-column">35th (tie)</td>
-     <td class="movies-column">The <i>Candid</i> Candid Camera</td>
-     <td class="times-aired-column">47</td>
-     <td class="words-of-description-column">Allen Funt’s camera goes naughty but nutty in this new adult version of his long-running favorite.  See what you've always wanted to see on this very <b>Candid</b> Candid Camera—and never could until now. An HBO exclusive, not to be missed.</td>
-     <td class="ratings-column"></td>
-     <td class="runtime-column"></td>
-     <td class="words-of-caution-column"><i></i></td>
-     <td class="metadata-column"></td>
 </tr>
 <tr>
      <td class="rankings-column">41</td>
@@ -927,17 +943,6 @@ th.metadata-column, td.metadata-column {
 <tr>
      <td class="rankings-column">43</td>
      <td class="most-aired-column">37th (tie)</td>
-     <td class="movies-column">Behind the Scenes (HBO Show)</td>
-     <td class="times-aired-column">39</td>
-     <td class="words-of-description-column">[Monthly TV show that gives you a peek <i>Behind the Scenes</i> -JS]</td>
-     <td class="ratings-column"></td>
-     <td class="runtime-column">:30</td>
-     <td class="words-of-caution-column"><i></i></td>
-     <td class="metadata-column"></td>
-</tr>
-<tr>
-     <td class="rankings-column">44</td>
-     <td class="most-aired-column">37th (tie)</td>
      <td class="movies-column">Brendon Chase</td>
      <td class="times-aired-column">39</td>
      <td class="words-of-description-column">Three English brothers run away from home to lead an outlaw life in a vast forest. Catch all 13 installments of the live-action adventure—each with a wealth of wildlife lore plus a cliff-hanger ending. <i>See schedule for individual episodes.</i></td>
@@ -945,6 +950,17 @@ th.metadata-column, td.metadata-column {
      <td class="runtime-column">:27</td>
      <td class="words-of-caution-column"><i></i></td>
      <td class="metadata-column">Adventure Family Series UK</td>
+</tr>
+<tr>
+     <td class="rankings-column">44</td>
+     <td class="most-aired-column">37th (tie)</td>
+     <td class="movies-column">Behind the Scenes (HBO Show)</td>
+     <td class="times-aired-column">39</td>
+     <td class="words-of-description-column">[Monthly TV show that gives you a peek <i>Behind the Scenes</i> -JS]</td>
+     <td class="ratings-column"></td>
+     <td class="runtime-column">:30</td>
+     <td class="words-of-caution-column"><i></i></td>
+     <td class="metadata-column"></td>
 </tr>
 <tr>
      <td class="rankings-column">45</td>
@@ -1078,8 +1094,6 @@ th.metadata-column, td.metadata-column {
      <td class="words-of-caution-column"><i></i></td>
      <td class="metadata-column"></td>
 </tr>
-
-
 
 
 

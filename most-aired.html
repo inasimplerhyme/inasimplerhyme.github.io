@@ -162,14 +162,22 @@
 }
 
 
+input[type="text"] {
+    width: 70%; /* Controls the total width of the input area */
+    padding: 10px; /* Adjusts vertical and horizontal space */
+    font-size: 18px; /* Increases size by changing text size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
 button#searchButton {
-    padding: 5px 10px;
+    padding: 13px 10px;
     background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 
@@ -264,6 +272,12 @@ th.metadata-column, td.metadata-column {
 
 /* Responsive adjustments for mobile devices - vertical*/
 @media screen and (max-width: 768px) and (orientation: portrait) {
+    input[type="text"] {
+        width: 70%;      
+        font-size: 14px;      /* Slightly smaller text */
+        padding: 10px;        /* Keep it touch-friendly */
+        box-sizing: border-box;
+    }
     /* Hide all columns by default */
     th, td {
         display: none;
@@ -418,6 +432,7 @@ th.metadata-column, td.metadata-column {
 <!-- Search Data -->
 
 
+
 <tr>
      <td class="rankings-column">1</td>
      <td class="most-aired-column">1st</td>
@@ -493,7 +508,7 @@ th.metadata-column, td.metadata-column {
      <td class="ratings-column">(PG)</td>
      <td class="runtime-column">1:53</td>
      <td class="words-of-caution-column"><i>Adult language, violence.</i></td>
-     <td class="metadata-column">Mike Hodges Sam J. Jones Melody Anderson Max von Sydow Topol Ornella Muti</td>
+     <td class="metadata-column">Mike Hodges Sam J. Jones Melody Anderson Max von Sydow Topol Ornella Muti Timothy Dalton</td>
 </tr>
 <tr>
      <td class="rankings-column">8</td>
@@ -3116,17 +3131,6 @@ th.metadata-column, td.metadata-column {
 <tr>
      <td class="rankings-column">246</td>
      <td class="most-aired-column">24th (tie)</td>
-     <td class="movies-column">The Gate (1987)</td>
-     <td class="times-aired-column">27</td>
-     <td class="words-of-description-column">STEPHEN DORFF<br>Do you know where the gate to hell is? Glen and Terry do—It's in Glen's backyard. When an old tree is removed, the gate is left wide open...and it's up to the boys to close it before demons take over the world!</td>
-     <td class="ratings-column">(PG-13)</td>
-     <td class="runtime-column">1:26</td>
-     <td class="words-of-caution-column"><i>AL, V</i></td>
-     <td class="metadata-column">Tibor Takacs Stephen Dorff Christa Denton Louis Tripp</td>
-</tr>
-<tr>
-     <td class="rankings-column">247</td>
-     <td class="most-aired-column">24th (tie)</td>
      <td class="movies-column">The Last Chase</td>
      <td class="times-aired-column">27</td>
      <td class="words-of-description-column"><b>Lee Majors<br>Chris Makepeace</b><br>All cars are ordered off the roads when America runs out of oil. Ex-auto racer Lee Majors salvages his prized Porsche for a trek to California where renegade drivers still run free. Chris Makepeace and Burgess Meredith co-star in this sci-fi action drama.</td>
@@ -3136,7 +3140,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Martyn Burke Lee Majors Burgess Meredith Chris Makepeace Alexandra Stewart George Touliatos</td>
 </tr>
 <tr>
-     <td class="rankings-column">248</td>
+     <td class="rankings-column">247</td>
      <td class="most-aired-column">24th (tie)</td>
      <td class="movies-column">HBO Pictures™ The Man Who Broke 1,000 Chains</td>
      <td class="times-aired-column">27</td>
@@ -3147,7 +3151,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Daniel Mann Val Kilmer Sonia Braga Charles Durning James Keach Elisha Cook Jr</td>
 </tr>
 <tr>
-     <td class="rankings-column">249</td>
+     <td class="rankings-column">248</td>
      <td class="most-aired-column">24th (tie)</td>
      <td class="movies-column">The Pirates of Penzance</td>
      <td class="times-aired-column">27</td>
@@ -3158,7 +3162,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Wilford Leach Kevin Kline Angela Lansbury Linda Ronstadt George Rose Rex Smith</td>
 </tr>
 <tr>
-     <td class="rankings-column">250</td>
+     <td class="rankings-column">249</td>
      <td class="most-aired-column">24th (tie)</td>
      <td class="movies-column">The Wraith</td>
      <td class="times-aired-column">27</td>
@@ -3169,7 +3173,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Mike Marvin Charlie Sheen Sherilyn Fenn Nick Cassavetes Randy Quaid Joseph Pilato</td>
 </tr>
 <tr>
-     <td class="rankings-column">251</td>
+     <td class="rankings-column">250</td>
      <td class="most-aired-column">24th (tie)</td>
      <td class="movies-column">Treasure Island (1972)</td>
      <td class="times-aired-column">27</td>
@@ -3180,7 +3184,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">John Hough Andrea Bianchi Antonio Margheriti Writers Wolf Mankowitz Orson Welles Hubert Frank Stars Orson Welles Kim Burfield Lionel Stander</td>
 </tr>
 <tr>
-     <td class="rankings-column">252</td>
+     <td class="rankings-column">251</td>
      <td class="most-aired-column">24th (tie)</td>
      <td class="movies-column">Tubby the Tuba</td>
      <td class="times-aired-column">27</td>
@@ -3191,7 +3195,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Alexander Schure Dick Van Dyke Pearl Bailey Hermione Gingold David Wayne Jose Ferrer</td>
 </tr>
 <tr>
-     <td class="rankings-column">253</td>
+     <td class="rankings-column">252</td>
      <td class="most-aired-column">24th (tie)</td>
      <td class="movies-column">Victor/Victoria</td>
      <td class="times-aired-column">27</td>
@@ -3202,7 +3206,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Blake Edwards Julie Andrews James Garner Robert Preston Lesley Ann Warren Alex Karras</td>
 </tr>
 <tr>
-     <td class="rankings-column">254</td>
+     <td class="rankings-column">253</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Bachelor Party</td>
      <td class="times-aired-column">26</td>
@@ -3213,7 +3217,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Neal Israel Tom Hanks Tawny Kitaen Adrian Zmed George Grizzard Robert Prescott</td>
 </tr>
 <tr>
-     <td class="rankings-column">255</td>
+     <td class="rankings-column">254</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Bite the Bullet</td>
      <td class="times-aired-column">26</td>
@@ -3224,7 +3228,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Richard Brooks Gene Hackman James Coburn Candice Bergen Ben Johnson Ian Bannen</td>
 </tr>
 <tr>
-     <td class="rankings-column">256</td>
+     <td class="rankings-column">255</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Bronco Billy</td>
      <td class="times-aired-column">26</td>
@@ -3235,7 +3239,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Clint Eastwood Clint Eastwood Sondra Locke Geoffrey Lewis Scatman Crothers Sam Bottoms</td>
 </tr>
 <tr>
-     <td class="rankings-column">257</td>
+     <td class="rankings-column">256</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Close Encounters of the Third Kind The Special Edition</td>
      <td class="times-aired-column">26</td>
@@ -3246,7 +3250,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Steven Spielberg Richard Dreyfuss François Truffaut Teri Garr Melinda Dillon Cary Guffey</td>
 </tr>
 <tr>
-     <td class="rankings-column">258</td>
+     <td class="rankings-column">257</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Conan the Destroyer</td>
      <td class="times-aired-column">26</td>
@@ -3257,7 +3261,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Richard Fleischer Arnold Schwarzenegger Grace Jones Olivia d'Abo Mako Tracey Walter</td>
 </tr>
 <tr>
-     <td class="rankings-column">259</td>
+     <td class="rankings-column">258</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Country (1984)</td>
      <td class="times-aired-column">26</td>
@@ -3268,7 +3272,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Richard Pearce Jessica Lange Sam Shepard Wilford Brimley Matt Clark Therese Graham</td>
 </tr>
 <tr>
-     <td class="rankings-column">260</td>
+     <td class="rankings-column">259</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Every Which Way But Loose</td>
      <td class="times-aired-column">26</td>
@@ -3279,7 +3283,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">James Fargo Clint Eastwood Sondra Locke Geoffrey Lewis Beverly D'Angelo Ruth Gordon</td>
 </tr>
 <tr>
-     <td class="rankings-column">261</td>
+     <td class="rankings-column">260</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Force 10 From Navarone (aka Force Ten From Navarone)</td>
      <td class="times-aired-column">26</td>
@@ -3290,7 +3294,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Guy Hamilton Robert Shaw Harrison Ford Barbara Bach Edward Fox Franco Nero</td>
 </tr>
 <tr>
-     <td class="rankings-column">262</td>
+     <td class="rankings-column">261</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Hooper (1978)</td>
      <td class="times-aired-column">26</td>
@@ -3301,7 +3305,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Hal Needham Burt Reynolds Jan-Michael Vincent Sally Field</td>
 </tr>
 <tr>
-     <td class="rankings-column">263</td>
+     <td class="rankings-column">262</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">It Came From Hollywood</td>
      <td class="times-aired-column">26</td>
@@ -3312,7 +3316,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Malcolm Leo Dana Olsen Dan Aykroyd John Candy Gilda Radner</td>
 </tr>
 <tr>
-     <td class="rankings-column">264</td>
+     <td class="rankings-column">263</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Lion of the Desert</td>
      <td class="times-aired-column">26</td>
@@ -3323,7 +3327,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Moustapha Akkad Anthony Quinn Oliver Reed Rod Steiger John Gielgud Raf Vallone</td>
 </tr>
 <tr>
-     <td class="rankings-column">265</td>
+     <td class="rankings-column">264</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Losin' It</td>
      <td class="times-aired-column">26</td>
@@ -3334,7 +3338,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Curtis Hanson Tom Cruise Jackie Earle Haley John Stockwell John P. Navin Jr.</td>
 </tr>
 <tr>
-     <td class="rankings-column">266</td>
+     <td class="rankings-column">265</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Martin Rosen's Production of Richard Adams's Watership Down</td>
      <td class="times-aired-column">26</td>
@@ -3345,7 +3349,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Martin Rosen John Hurt Richard Briers Michael Graham Cox John Bennett Simon Cadell</td>
 </tr>
 <tr>
-     <td class="rankings-column">267</td>
+     <td class="rankings-column">266</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Massacre in Rome</td>
      <td class="times-aired-column">26</td>
@@ -3356,7 +3360,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">George P. Cosmatos Richard Burton Marcello Mastroianni Leo McKern John Steiner</td>
 </tr>
 <tr>
-     <td class="rankings-column">268</td>
+     <td class="rankings-column">267</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">National Lampoon's ® Animal House</td>
      <td class="times-aired-column">26</td>
@@ -3367,7 +3371,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">John Landis John Belushi Tim Matheson John Vernon Verna Bloom Thomas Hulce</td>
 </tr>
 <tr>
-     <td class="rankings-column">269</td>
+     <td class="rankings-column">268</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">National Lampoon's® European Vacation</td>
      <td class="times-aired-column">26</td>
@@ -3378,7 +3382,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Amy Heckerling Chevy Chase Beverly D'Angelo Jason Lively Dana Hill Eric Idle</td>
 </tr>
 <tr>
-     <td class="rankings-column">270</td>
+     <td class="rankings-column">269</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Nighthawks</td>
      <td class="times-aired-column">26</td>
@@ -3389,7 +3393,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Bruce Malmuth Sylvester Stallone Billy Dee Williams Rutger Hauer Lindsay Wagner Persis Khambatta</td>
 </tr>
 <tr>
-     <td class="rankings-column">271</td>
+     <td class="rankings-column">270</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Nothing in Common (1986)</td>
      <td class="times-aired-column">26</td>
@@ -3400,7 +3404,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Garry Marshall Tom Hanks Jackie Gleason Eva Marie Saint Hector Elizondo Bess Armstrong</td>
 </tr>
 <tr>
-     <td class="rankings-column">272</td>
+     <td class="rankings-column">271</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Over the Top (1987)</td>
      <td class="times-aired-column">26</td>
@@ -3411,7 +3415,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Menahem Golan Sylvester Stallone Robert Loggia Susan Blakely Rick Zumwalt David Mendenhall</td>
 </tr>
 <tr>
-     <td class="rankings-column">273</td>
+     <td class="rankings-column">272</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Police Academy 3: Back in Training (1986)</td>
      <td class="times-aired-column">26</td>
@@ -3422,7 +3426,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Jerry Paris Steve Guttenberg Bubba Smith David Graf Michael Winslow Marion Ramsey</td>
 </tr>
 <tr>
-     <td class="rankings-column">274</td>
+     <td class="rankings-column">273</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Poltergeist II: The Other Side (1986)</td>
      <td class="times-aired-column">26</td>
@@ -3433,7 +3437,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Brian Gibson JoBeth Williams Craig T Nelson Heather O Rourke Oliver Robins Zelda Rubinstein</td>
 </tr>
 <tr>
-     <td class="rankings-column">275</td>
+     <td class="rankings-column">274</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Popeye (1980)</td>
      <td class="times-aired-column">26</td>
@@ -3444,7 +3448,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Robert Altman Robin Williams Shelley Duvall Ray Walston Paul Dooley Paul L Smith</td>
 </tr>
 <tr>
-     <td class="rankings-column">276</td>
+     <td class="rankings-column">275</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Project X (1987)</td>
      <td class="times-aired-column">26</td>
@@ -3455,7 +3459,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Jonathan Kaplan Matthew Broderick Helen Hunt William Sadler Johnny Ray McGhee Jonathan Stark</td>
 </tr>
 <tr>
-     <td class="rankings-column">277</td>
+     <td class="rankings-column">276</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Revenge of the Nerds (1984)</td>
      <td class="times-aired-column">26</td>
@@ -3466,7 +3470,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Jeff Kanew Robert Carradine Anthony Edwards Timothy Busfield Andrew Cassese Curtis Armstrong</td>
 </tr>
 <tr>
-     <td class="rankings-column">278</td>
+     <td class="rankings-column">277</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Richard Pryor Live On The Sunset Strip</td>
      <td class="times-aired-column">26</td>
@@ -3477,7 +3481,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Richard Pryor</td>
 </tr>
 <tr>
-     <td class="rankings-column">279</td>
+     <td class="rankings-column">278</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Same Time, Next Year</td>
      <td class="times-aired-column">26</td>
@@ -3488,7 +3492,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Robert Mulligan Ellen Burstyn Alan Alda Ivan Bonar Bernie Kuby Charles White</td>
 </tr>
 <tr>
-     <td class="rankings-column">280</td>
+     <td class="rankings-column">279</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Short Circuit (1986)</td>
      <td class="times-aired-column">26</td>
@@ -3499,7 +3503,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">John Badham Ally Sheedy Steve Guttenberg Fisher Stevens Austin Pendleton G W Bailey</td>
 </tr>
 <tr>
-     <td class="rankings-column">281</td>
+     <td class="rankings-column">280</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Silverado (1985)</td>
      <td class="times-aired-column">26</td>
@@ -3510,7 +3514,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Lawrence Kasdan Kevin Kline Scott Glenn Kevin Costner Danny Glover Brian Dennehy</td>
 </tr>
 <tr>
-     <td class="rankings-column">282</td>
+     <td class="rankings-column">281</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Something Wicked This Way Comes</td>
      <td class="times-aired-column">26</td>
@@ -3521,7 +3525,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Jack Clayton Jason Robards Jonathan Pryce Diane Ladd Pam Grier Royal Dano</td>
 </tr>
 <tr>
-     <td class="rankings-column">283</td>
+     <td class="rankings-column">282</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Soul Man (1986)</td>
      <td class="times-aired-column">26</td>
@@ -3532,7 +3536,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Steve Miner C. Thomas Howell Rae Dawn Chong Arye Gross James Earl Jones Leslie Nielsen</td>
 </tr>
 <tr>
-     <td class="rankings-column">284</td>
+     <td class="rankings-column">283</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Spacehunter: Adventures in the Forbidden Zone</td>
      <td class="times-aired-column">26</td>
@@ -3543,7 +3547,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Lamont Johnson Peter Strauss Molly Ringwald Ernie Hudson Andrea Marcovicci</td>
 </tr>
 <tr>
-     <td class="rankings-column">285</td>
+     <td class="rankings-column">284</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Stephen King's Cat's Eye</td>
      <td class="times-aired-column">26</td>
@@ -3554,7 +3558,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Lewis Teague Drew Barrymore James Woods Alan King Robert Hays Kenneth McMillan</td>
 </tr>
 <tr>
-     <td class="rankings-column">286</td>
+     <td class="rankings-column">285</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">Superman IV: The Quest for Peace</td>
      <td class="times-aired-column">26</td>
@@ -3565,7 +3569,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Sidney J Furie Christopher Reeve Gene Hackman Margot Kidder Jackie Cooper Marc McClure</td>
 </tr>
 <tr>
-     <td class="rankings-column">287</td>
+     <td class="rankings-column">286</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">The Beniker Gang</td>
      <td class="times-aired-column">26</td>
@@ -3576,7 +3580,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Ken Kwapis Andrew McCarthy Jennie Dundas Brandon Call Danny Corkill Charles Fields</td>
 </tr>
 <tr>
-     <td class="rankings-column">288</td>
+     <td class="rankings-column">287</td>
      <td class="most-aired-column">25th (tie)</td>
      <td class="movies-column">The Big Red One</td>
      <td class="times-aired-column">26</td>
@@ -3585,6 +3589,17 @@ th.metadata-column, td.metadata-column {
      <td class="runtime-column">1:53</td>
      <td class="words-of-caution-column"><i>Profanity, violence.</i></td>
      <td class="metadata-column">Samuel Fuller Lee Marvin Mark Hamill Robert Carradine Bobby Di Cicco Kelly Ward</td>
+</tr>
+<tr>
+     <td class="rankings-column">288</td>
+     <td class="most-aired-column">25th (tie)</td>
+     <td class="movies-column">The Gate (1987)</td>
+     <td class="times-aired-column">26</td>
+     <td class="words-of-description-column">STEPHEN DORFF<br>Do you know where the gate to hell is? Glen and Terry do—It's in Glen's backyard. When an old tree is removed, the gate is left wide open...and it's up to the boys to close it before demons take over the world!</td>
+     <td class="ratings-column">(PG-13)</td>
+     <td class="runtime-column">1:26</td>
+     <td class="words-of-caution-column"><i>AL, V</i></td>
+     <td class="metadata-column">Tibor Takacs Stephen Dorff Christa Denton Louis Tripp</td>
 </tr>
 <tr>
      <td class="rankings-column">289</td>
@@ -5385,7 +5400,7 @@ th.metadata-column, td.metadata-column {
      <td class="movies-column">High School U.S.A.</td>
      <td class="times-aired-column">21</td>
      <td class="words-of-description-column">With-it teenagers take on square preppies and the older generation. Michael J.Fox stars.</td>
-     <td class="ratings-column">(PG-13)</td>
+     <td class="ratings-column"></td>
      <td class="runtime-column">1:36</td>
      <td class="words-of-caution-column"><i></i></td>
      <td class="metadata-column">Rod Amateau Writers Alan EisenstockLarry Mintz Stars Michael J. FoxNancy McKeonTodd Bridges Crystal Bernard Anthony Edwards Dawn Wells tom Villard Dana Plato Bob Denver Ken Osmond Tony Dow Dwayne Hickman</td>
@@ -26862,6 +26877,9 @@ th.metadata-column, td.metadata-column {
      <td class="words-of-caution-column"><i></i></td>
      <td class="metadata-column">Edward Dmytryk Laurence Harvey Capucine Jane Fonda Anne Baxter Barbara Stanwyck</td>
 </tr>
+
+
+
 
 
 

@@ -193,14 +193,22 @@
 	    
 	}
 
+input[type="text"] {
+    width: 70%; /* Controls the total width of the input area */
+    padding: 10px; /* Adjusts vertical and horizontal space */
+    font-size: 18px; /* Increases size by changing text size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
 button#searchButton {
-    padding: 5px 10px;
+    padding: 13px 10px;
     background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 
@@ -295,6 +303,12 @@ th.metadata-column, td.metadata-column {
 
 /* Responsive adjustments for mobile devices - vertical*/
 @media screen and (max-width: 768px) and (orientation: portrait) {
+    input[type="text"] {
+        width: 70%;      
+        font-size: 14px;      /* Slightly smaller text */
+        padding: 10px;        /* Keep it touch-friendly */
+        box-sizing: border-box;
+    }
     /* Hide all columns by default */
     th, td {
         display: none;
@@ -8412,6 +8426,17 @@ th.metadata-column, td.metadata-column {
 <tr>
      <td class="rankings-column">723</td>
      <td class="most-aired-column">41st (tie)</td>
+     <td class="movies-column">World Championship Boxing Mike Tyson vs. Michael Spinks</td>
+     <td class="times-aired-column">2</td>
+     <td class="words-of-description-column"><i>[This fight originally happened on June 27, 1988, but did not air live on HBO, and was shown the following Saturday, July 2nd.-JS]</i></td>
+     <td class="ratings-column"></td>
+     <td class="runtime-column"></td>
+     <td class="words-of-caution-column"><i></i></td>
+     <td class="metadata-column"></td>
+</tr>
+<tr>
+     <td class="rankings-column">724</td>
+     <td class="most-aired-column">41st (tie)</td>
      <td class="movies-column">Young Comedians Show (1980)</td>
      <td class="times-aired-column">2</td>
      <td class="words-of-description-column">Victor Borge hosts</td>
@@ -8421,7 +8446,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Comedy Special</td>
 </tr>
 <tr>
-     <td class="rankings-column">724</td>
+     <td class="rankings-column">725</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column"><s>FIGHT NIGHT DOUBLEHEADER! Iron Mike Tyson vs. Donovan "Razor" Ruddock</s> PLUS Julia César Chávez vs.  Sammy Fuentes</td>
      <td class="times-aired-column">1</td>
@@ -8432,7 +8457,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">725</td>
+     <td class="rankings-column">726</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Ace Award Winner (1988)</td>
      <td class="times-aired-column">1</td>
@@ -8443,7 +8468,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">726</td>
+     <td class="rankings-column">727</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Atlantic Records 40th Anniversary Live!</td>
      <td class="times-aired-column">1</td>
@@ -8454,7 +8479,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">727</td>
+     <td class="rankings-column">728</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Boxing: Future Champions</td>
      <td class="times-aired-column">1</td>
@@ -8465,7 +8490,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Boxing Sports Special</td>
 </tr>
 <tr>
-     <td class="rankings-column">728</td>
+     <td class="rankings-column">729</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Championship Boxing: Marvin Hagler vs. Vito Antuofermo</td>
      <td class="times-aired-column">1</td>
@@ -8476,7 +8501,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Marvin Hagler Vito Antuofermo</td>
 </tr>
 <tr>
-     <td class="rankings-column">729</td>
+     <td class="rankings-column">730</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Comic Relief (1986) (Live)</td>
      <td class="times-aired-column">1</td>
@@ -8487,7 +8512,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">No director credited Billy Crystal Robin Williams Whoopi Goldberg</td>
 </tr>
 <tr>
-     <td class="rankings-column">730</td>
+     <td class="rankings-column">731</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Comic Relief (1986) Part 1</td>
      <td class="times-aired-column">1</td>
@@ -8498,7 +8523,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">No director credited Billy Crystal Robin Williams Whoopi Goldberg</td>
 </tr>
 <tr>
-     <td class="rankings-column">731</td>
+     <td class="rankings-column">732</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Comic Relief (1986) Part 2</td>
      <td class="times-aired-column">1</td>
@@ -8509,7 +8534,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">No director credited Billy Crystal Robin Williams Whoopi Goldberg</td>
 </tr>
 <tr>
-     <td class="rankings-column">732</td>
+     <td class="rankings-column">733</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Comic Relief® '87 (Live)</td>
      <td class="times-aired-column">1</td>
@@ -8520,7 +8545,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">733</td>
+     <td class="rankings-column">734</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Comic Relief® III (Live) (1989)</td>
      <td class="times-aired-column">1</td>
@@ -8531,7 +8556,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">(no director credited) Billy Crystal Whoopi Goldberg Robin Williams Martin Short Bobcat Goldthwait Sinbad</td>
 </tr>
 <tr>
-     <td class="rankings-column">734</td>
+     <td class="rankings-column">735</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">HBO Intermission Special: The Sand Worm (aka Le château de sable) 1977</td>
      <td class="times-aired-column">1</td>
@@ -8542,7 +8567,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">735</td>
+     <td class="rankings-column">736</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">HBO Sports Exclusive — World Championship Boxing LIVE! Jose Luis Ramirez vs. Hector "Macho" Camacho</td>
      <td class="times-aired-column">1</td>
@@ -8553,7 +8578,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">736</td>
+     <td class="rankings-column">737</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Heavyweight Boxing Gerry Cooney vs. Phillip Brown (LIVE)</td>
      <td class="times-aired-column">1</td>
@@ -8564,7 +8589,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">HBO Sports Boxing Gerry Cooney</td>
 </tr>
 <tr>
-     <td class="rankings-column">737</td>
+     <td class="rankings-column">738</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Heavyweight Boxing: "Mike Tyson vs. Mitch Green (LIVE)"</td>
      <td class="times-aired-column">1</td>
@@ -8575,7 +8600,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Mike Tyson Mitch Green</td>
 </tr>
 <tr>
-     <td class="rankings-column">738</td>
+     <td class="rankings-column">739</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Heavyweight Boxing: Gerry Cooney vs. Ron Lyle</td>
      <td class="times-aired-column">1</td>
@@ -8586,7 +8611,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">739</td>
+     <td class="rankings-column">740</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Heavyweight Boxing: Ken Norton vs. Gerry Cooney</td>
      <td class="times-aired-column">1</td>
@@ -8597,7 +8622,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Ken Norton Gerry Cooney</td>
 </tr>
 <tr>
-     <td class="rankings-column">740</td>
+     <td class="rankings-column">741</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Mayhem in Miami: Light Heavyweights Victor Galindez vs. Yaqui Lopez</td>
      <td class="times-aired-column">1</td>
@@ -8608,7 +8633,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Boxing Event</td>
 </tr>
 <tr>
-     <td class="rankings-column">741</td>
+     <td class="rankings-column">742</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">The Comeback! Sugar Ray Leonard vs. Kevin Howard (LIVE!)</td>
      <td class="times-aired-column">1</td>
@@ -8619,7 +8644,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Boxing Special Sugar Ray Leonard Kevin Howard</td>
 </tr>
 <tr>
-     <td class="rankings-column">742</td>
+     <td class="rankings-column">743</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">The Nineth Annual Ace Awards Ceremony (LIVE) - 1988</td>
      <td class="times-aired-column">1</td>
@@ -8630,7 +8655,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">743</td>
+     <td class="rankings-column">744</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">The Oak Ridge Boys In Concert</td>
      <td class="times-aired-column">1</td>
@@ -8641,7 +8666,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">744</td>
+     <td class="rankings-column">745</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">WBA Heavyweight Championship (LIVE) Michael Dokes vs. Gerrie Coetzee</td>
      <td class="times-aired-column">1</td>
@@ -8652,7 +8677,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Live Boxing Championship Match</td>
 </tr>
 <tr>
-     <td class="rankings-column">745</td>
+     <td class="rankings-column">746</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Welcome Home!!! A National Tribute to the Vietnam Veteran (Same-Day Tape Delayed)</td>
      <td class="times-aired-column">1</td>
@@ -8663,7 +8688,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">746</td>
+     <td class="rankings-column">747</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Willie Nelson's New Year's Eve Party LIVE</td>
      <td class="times-aired-column">1</td>
@@ -8674,7 +8699,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Willie Nelson Special</td>
 </tr>
 <tr>
-     <td class="rankings-column">747</td>
+     <td class="rankings-column">748</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '81 Men's Quarter-Finals</td>
      <td class="times-aired-column">1</td>
@@ -8685,7 +8710,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">748</td>
+     <td class="rankings-column">749</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '81 Men's Semi-Finals</td>
      <td class="times-aired-column">1</td>
@@ -8696,7 +8721,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">749</td>
+     <td class="rankings-column">750</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '81 Women's Quarter-Finals</td>
      <td class="times-aired-column">1</td>
@@ -8707,7 +8732,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">750</td>
+     <td class="rankings-column">751</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '81 Women's Semi-Finals</td>
      <td class="times-aired-column">1</td>
@@ -8718,7 +8743,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">751</td>
+     <td class="rankings-column">752</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '82 Men's Quarterfinals</td>
      <td class="times-aired-column">1</td>
@@ -8729,7 +8754,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">752</td>
+     <td class="rankings-column">753</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '82 Women's Quarterfinals</td>
      <td class="times-aired-column">1</td>
@@ -8740,7 +8765,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">753</td>
+     <td class="rankings-column">754</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '82 Women's Semifinals</td>
      <td class="times-aired-column">1</td>
@@ -8751,7 +8776,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">754</td>
+     <td class="rankings-column">755</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '85 (Live)</td>
      <td class="times-aired-column">1</td>
@@ -8762,7 +8787,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">755</td>
+     <td class="rankings-column">756</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '87: Men's Quarterfinals</td>
      <td class="times-aired-column">1</td>
@@ -8773,7 +8798,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">756</td>
+     <td class="rankings-column">757</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '87: Women's Quarterfinals</td>
      <td class="times-aired-column">1</td>
@@ -8784,7 +8809,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">757</td>
+     <td class="rankings-column">758</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '87: Women's Semifinals</td>
      <td class="times-aired-column">1</td>
@@ -8795,7 +8820,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">758</td>
+     <td class="rankings-column">759</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '88: Men's Quarterfinals</td>
      <td class="times-aired-column">1</td>
@@ -8806,7 +8831,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">759</td>
+     <td class="rankings-column">760</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '88: Women's Quarterfinals</td>
      <td class="times-aired-column">1</td>
@@ -8817,7 +8842,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">760</td>
+     <td class="rankings-column">761</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '88: Women's Semifinals</td>
      <td class="times-aired-column">1</td>
@@ -8828,7 +8853,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">761</td>
+     <td class="rankings-column">762</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '89 Men's Quarterfinals</td>
      <td class="times-aired-column">1</td>
@@ -8839,7 +8864,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">762</td>
+     <td class="rankings-column">763</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '89 Women's Quarterfinals</td>
      <td class="times-aired-column">1</td>
@@ -8850,7 +8875,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">763</td>
+     <td class="rankings-column">764</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon '89 Women's Semifinals</td>
      <td class="times-aired-column">1</td>
@@ -8861,7 +8886,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">764</td>
+     <td class="rankings-column">765</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon! (1980) Men's Quarter-Finals</td>
      <td class="times-aired-column">1</td>
@@ -8872,7 +8897,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">765</td>
+     <td class="rankings-column">766</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon! (1980) Men's Semi-Finals</td>
      <td class="times-aired-column">1</td>
@@ -8883,7 +8908,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">766</td>
+     <td class="rankings-column">767</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon! (1980) Women's Quarter-Finals</td>
      <td class="times-aired-column">1</td>
@@ -8894,7 +8919,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">767</td>
+     <td class="rankings-column">768</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">Wimbledon! (1980) Women's Semi-Finals</td>
      <td class="times-aired-column">1</td>
@@ -8905,7 +8930,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">768</td>
+     <td class="rankings-column">769</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (Live!) Salvador Sanchez vs. Pat Cowdell</td>
      <td class="times-aired-column">1</td>
@@ -8916,7 +8941,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Salvador Sanchez Pat Cowdell</td>
 </tr>
 <tr>
-     <td class="rankings-column">769</td>
+     <td class="rankings-column">770</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (Live) "Mike Tyson vs. <s>David Bey</s> José Ribalta"</td>
      <td class="times-aired-column">1</td>
@@ -8927,7 +8952,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">770</td>
+     <td class="rankings-column">771</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Bramble vs. Mancini</td>
      <td class="times-aired-column">1</td>
@@ -8938,7 +8963,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">No director credited Ray Mancini Livingstone Bramble</td>
 </tr>
 <tr>
-     <td class="rankings-column">771</td>
+     <td class="rankings-column">772</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Bramble vs. Rosario Camacho vs. Boza-Edwards</td>
      <td class="times-aired-column">1</td>
@@ -8949,7 +8974,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">772</td>
+     <td class="rankings-column">773</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Curry vs McCrory</td>
      <td class="times-aired-column">1</td>
@@ -8960,7 +8985,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">No director credited Donald Curry Milton McCrory</td>
 </tr>
 <tr>
-     <td class="rankings-column">773</td>
+     <td class="rankings-column">774</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Double Header Starling vs. Breland and Chavez vs. Aguilar</td>
      <td class="times-aired-column">1</td>
@@ -8971,7 +8996,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">774</td>
+     <td class="rankings-column">775</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Doubleheader: Starling vs. Molinares & Honeyghan vs. Chung</td>
      <td class="times-aired-column">1</td>
@@ -8982,7 +9007,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">775</td>
+     <td class="rankings-column">776</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Dwight Braxton vs. Matthew Saad Muhammad</td>
      <td class="times-aired-column">1</td>
@@ -8993,7 +9018,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">776</td>
+     <td class="rankings-column">777</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Dwight Braxton vs. Michael Spinks</td>
      <td class="times-aired-column">1</td>
@@ -9004,7 +9029,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Boxing Dwight Braxton Michael Spinks</td>
 </tr>
 <tr>
-     <td class="rankings-column">777</td>
+     <td class="rankings-column">778</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Edwin Rosario  vs. Julio Cesar Chavez</td>
      <td class="times-aired-column">1</td>
@@ -9015,7 +9040,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">778</td>
+     <td class="rankings-column">779</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Greg Page vs. Tim Witherspoon</td>
      <td class="times-aired-column">1</td>
@@ -9026,7 +9051,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Boxing Special Greg Page Tim Witherspoon</td>
 </tr>
 <tr>
-     <td class="rankings-column">779</td>
+     <td class="rankings-column">780</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Hagler vs. Hamsho</td>
      <td class="times-aired-column">1</td>
@@ -9037,7 +9062,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">No director listed Marvin Hagler Mustafa Hamsho</td>
 </tr>
 <tr>
-     <td class="rankings-column">780</td>
+     <td class="rankings-column">781</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (Live) Hagler vs. Obelmejias</td>
      <td class="times-aired-column">1</td>
@@ -9048,7 +9073,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Boxing Marvin Hagler Fulgencio Obelmejias</td>
 </tr>
 <tr>
-     <td class="rankings-column">781</td>
+     <td class="rankings-column">782</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Hector "Macho" Camacho vs. Edwin Rosario</td>
      <td class="times-aired-column">1</td>
@@ -9059,7 +9084,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">782</td>
+     <td class="rankings-column">783</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Holmes vs. Bey</td>
      <td class="times-aired-column">1</td>
@@ -9070,7 +9095,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">783</td>
+     <td class="rankings-column">784</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Holmes vs. Smith</td>
      <td class="times-aired-column">1</td>
@@ -9081,7 +9106,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Larry Holmes James Smith Sports</td>
 </tr>
 <tr>
-     <td class="rankings-column">784</td>
+     <td class="rankings-column">785</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Holmes vs. Spinks</td>
      <td class="times-aired-column">1</td>
@@ -9092,7 +9117,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">785</td>
+     <td class="rankings-column">786</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Iron Mike Tyson vs. Carl "The Truth" Williams</td>
      <td class="times-aired-column">1</td>
@@ -9103,7 +9128,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">786</td>
+     <td class="rankings-column">787</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Julio César Chávez vs. José Luis Ramirez</td>
      <td class="times-aired-column">1</td>
@@ -9114,7 +9139,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">787</td>
+     <td class="rankings-column">788</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Marvelous Marvin Hagler vs. Juan Domingo Roldan</td>
      <td class="times-aired-column">1</td>
@@ -9125,7 +9150,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Boxing Special Marvin Hagler Juan Domingo Roldan</td>
 </tr>
 <tr>
-     <td class="rankings-column">788</td>
+     <td class="rankings-column">789</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Marvelous Marvin Hagler vs. Wilford Scypion</td>
      <td class="times-aired-column">1</td>
@@ -9136,7 +9161,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Boxing Marvin Hagler Wilford Scypion</td>
 </tr>
 <tr>
-     <td class="rankings-column">789</td>
+     <td class="rankings-column">790</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Marvin Hagler vs. Tony Sibson PLUS The Boxing Year in Review</td>
      <td class="times-aired-column">1</td>
@@ -9147,7 +9172,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Boxing Marvin Hagler Tony Sibson</td>
 </tr>
 <tr>
-     <td class="rankings-column">790</td>
+     <td class="rankings-column">791</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Michael Nunn vs. Iran Barkley</td>
      <td class="times-aired-column">1</td>
@@ -9158,7 +9183,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">791</td>
+     <td class="rankings-column">792</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Michael Nunn vs. Sumbu Kalambay</td>
      <td class="times-aired-column">1</td>
@@ -9169,7 +9194,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">792</td>
+     <td class="rankings-column">793</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">WORLD CHAMPIONSHIP BOXING (LIVE) Michael Spinks vs. Steffen Tangstad</td>
      <td class="times-aired-column">1</td>
@@ -9180,7 +9205,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">793</td>
+     <td class="rankings-column">794</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Mike McCallum vs. Donald Curry</td>
      <td class="times-aired-column">1</td>
@@ -9191,7 +9216,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">794</td>
+     <td class="rankings-column">795</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Mike Tyson vs. James "Bonecrusher" Smith</td>
      <td class="times-aired-column">1</td>
@@ -9202,7 +9227,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">795</td>
+     <td class="rankings-column">796</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Mike Tyson vs. Larry Holmes</td>
      <td class="times-aired-column">1</td>
@@ -9213,7 +9238,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">796</td>
+     <td class="rankings-column">797</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Mike Tyson vs. Pinklon Thomas</td>
      <td class="times-aired-column">1</td>
@@ -9224,7 +9249,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">797</td>
+     <td class="rankings-column">798</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Mike Tyson vs. Tony Tubbs</td>
      <td class="times-aired-column">1</td>
@@ -9235,7 +9260,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">798</td>
+     <td class="rankings-column">799</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Mike Tyson vs. Tony Tucker</td>
      <td class="times-aired-column">1</td>
@@ -9246,7 +9271,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">799</td>
+     <td class="rankings-column">800</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Mike Tyson vs. Tyrell Biggs</td>
      <td class="times-aired-column">1</td>
@@ -9257,7 +9282,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">800</td>
+     <td class="rankings-column">801</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Pinklon Thomas vs. Mike Weaver</td>
      <td class="times-aired-column">1</td>
@@ -9268,7 +9293,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">801</td>
+     <td class="rankings-column">802</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (Live) Pinklon Thomas vs. Trevor Berbick</td>
      <td class="times-aired-column">1</td>
@@ -9279,7 +9304,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">802</td>
+     <td class="rankings-column">803</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Ray "Boom Boom" Mancini vs. Bobby Chacon</td>
      <td class="times-aired-column">1</td>
@@ -9290,7 +9315,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Boxing Special Ray Mancini Bobby Chacon</td>
 </tr>
 <tr>
-     <td class="rankings-column">803</td>
+     <td class="rankings-column">804</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Roger Mayweather vs Julio Céaser Chávez</td>
      <td class="times-aired-column">1</td>
@@ -9301,7 +9326,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">804</td>
+     <td class="rankings-column">805</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Tim Witherspoon vs. <s>Tony Tubbs</s> James <q>Bonecrusher</q> Smith</td>
      <td class="times-aired-column">1</td>
@@ -9312,7 +9337,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">805</td>
+     <td class="rankings-column">806</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Tim Witherspoon vs. Frank Bruno</td>
      <td class="times-aired-column">1</td>
@@ -9323,7 +9348,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">806</td>
+     <td class="rankings-column">807</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Tim Witherspoon vs. Pinklon Thomas</td>
      <td class="times-aired-column">1</td>
@@ -9334,7 +9359,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">807</td>
+     <td class="rankings-column">808</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Tony Tubbs vs. Tim Witherspoon</td>
      <td class="times-aired-column">1</td>
@@ -9345,7 +9370,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">808</td>
+     <td class="rankings-column">809</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Trevor Berbick vs. Mike Tyson</td>
      <td class="times-aired-column">1</td>
@@ -9356,7 +9381,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">809</td>
+     <td class="rankings-column">810</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Weaver vs. Dokes</td>
      <td class="times-aired-column">1</td>
@@ -9367,7 +9392,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Boxing Mike Weaver Michael Dokes</td>
 </tr>
 <tr>
-     <td class="rankings-column">810</td>
+     <td class="rankings-column">811</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (Live) Weaver vs. Tillis and Hagler vs. Hamsho</td>
      <td class="times-aired-column">1</td>
@@ -9378,7 +9403,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Marvin Hagler Mustafa Hamsho</td>
 </tr>
 <tr>
-     <td class="rankings-column">811</td>
+     <td class="rankings-column">812</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Wilfred Benitez vs. Carlos Santos</td>
      <td class="times-aired-column">1</td>
@@ -9389,7 +9414,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">812</td>
+     <td class="rankings-column">813</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE) Wilfred Benitez vs. Roberto Duran</td>
      <td class="times-aired-column">1</td>
@@ -9400,7 +9425,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Boxing Wilfred Benitez Roberto Duran</td>
 </tr>
 <tr>
-     <td class="rankings-column">813</td>
+     <td class="rankings-column">814</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (Live): Hector "Macho" Camacho vs. Rafael Solis</td>
      <td class="times-aired-column">1</td>
@@ -9411,7 +9436,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Live Boxing Event</td>
 </tr>
 <tr>
-     <td class="rankings-column">814</td>
+     <td class="rankings-column">815</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE): Michael Spinks vs. Larry Holmes</td>
      <td class="times-aired-column">1</td>
@@ -9422,7 +9447,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column"></td>
 </tr>
 <tr>
-     <td class="rankings-column">815</td>
+     <td class="rankings-column">816</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE)<br>Honeyghan vs. Starling<br><s>Molinares</s> Seung Soon Lee vs. Breland</td>
      <td class="times-aired-column">1</td>
@@ -9433,7 +9458,7 @@ th.metadata-column, td.metadata-column {
      <td class="metadata-column">Sports Boxing</td>
 </tr>
 <tr>
-     <td class="rankings-column">816</td>
+     <td class="rankings-column">817</td>
      <td class="most-aired-column">42nd (tie)</td>
      <td class="movies-column">World Championship Boxing (LIVE)<br>Mike Tyson vs. Frank Bruno</td>
      <td class="times-aired-column">1</td>
@@ -9442,17 +9467,6 @@ th.metadata-column, td.metadata-column {
      <td class="runtime-column"></td>
      <td class="words-of-caution-column"><i></i></td>
      <td class="metadata-column">Sports Boxing</td>
-</tr>
-<tr>
-     <td class="rankings-column">817</td>
-     <td class="most-aired-column">42nd (tie)</td>
-     <td class="movies-column">World Championship Boxing Mike Tyson vs. Michael Spinks</td>
-     <td class="times-aired-column">1</td>
-     <td class="words-of-description-column"><i>[This fight originally happened on June 27, 1988, but did not air live on HBO, though there was an HBO produced special, </i>Countdown to Tyson-Spinks,<i> that aired in June preceding the fight.-JS]</i></td>
-     <td class="ratings-column"></td>
-     <td class="runtime-column"></td>
-     <td class="words-of-caution-column"><i></i></td>
-     <td class="metadata-column"></td>
 </tr>
 <tr>
      <td class="rankings-column">818</td>
@@ -9520,7 +9534,6 @@ th.metadata-column, td.metadata-column {
      <td class="words-of-caution-column"><i></i></td>
      <td class="metadata-column"></td>
 </tr>
-
 
 
 
